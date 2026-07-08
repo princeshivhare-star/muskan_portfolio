@@ -50,7 +50,7 @@ export function WhatIBring() {
     <section
       ref={sectionRef}
       aria-label="What I bring to the table"
-      className="mx-auto max-w-6xl overflow-hidden px-5 py-16 md:px-8 md:py-24"
+      className="mx-auto max-w-6xl overflow-hidden px-5 pt-10 pb-16 md:px-8 md:pt-16 md:pb-24"
     >
       <div className="relative min-h-[620px] md:min-h-[620px]">
         {badges.map((badge) => (
