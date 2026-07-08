@@ -25,15 +25,6 @@ const labels = [
   'Business Cards',
   'Brand Guidelines',
 ]
-  
-if (label === 'Visual Design') {
-      top -= 5
-    }
-
-    // Move Brochure Design up
-if (label === 'Brochure Design') {
-      top -= 5
-    }
 
 export function WhatIBring() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -67,7 +58,6 @@ export function WhatIBring() {
       let top = 50 + radiusY * Math.sin(angle)
       let left = 50 + radiusX * Math.cos(angle)
 
-      // Move these two badges slightly upward
       if (label === 'Visual Design') {
         top -= 5
       }
