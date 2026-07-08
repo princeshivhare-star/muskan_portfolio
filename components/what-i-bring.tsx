@@ -49,24 +49,32 @@ export function WhatIBring() {
   }, [])
 
   // Generate a perfectly even circular layout
-  const badges: Badge[] = useMemo(() => {
-    const radiusX = 39
-    const radiusY = 44
+  const badges: Badge[] = useMemo(() => const badges: Badge[] = useMemo(() => {
+  const radiusX = 39
+  const radiusY = 44
 
-    return labels.map((label, i) => {
-      const angle = (-90 + (360 / labels.length) * i) * (Math.PI / 180)
+  return labels.map((label, i) => {
+    const angle = (-90 + (360 / labels.length) * i) * (Math.PI / 180)
 
-      return {
-        label,
-        top: `${50 + radiusY * Math.sin(angle)}%`,
-        left: `${50 + radiusX * Math.cos(angle)}%`,
-        rotate: Math.sin(angle) * 10,
-        fx: -Math.cos(angle) * 180,
-        fy: -Math.sin(angle) * 180,
-        delay: i * 50,
-      }
-    })
-  }, [])
+    let top = 50 + radiusY * Math.sin(angle)
+    let left = 50 + radiusX * Math.cos(angle)
+
+    // Move only these two badges slightly upward
+    if (label === 'Visual Design' || label === 'Brochure Design') {
+      top -= 5 // Increase to 6 or 7 if you want them higher
+    }
+
+    return {
+      label,
+      top: `${top}%`,
+      left: `${left}%`,
+      rotate: Math.sin(angle) * 10,
+      fx: -Math.cos(angle) * 180,
+      fy: -Math.sin(angle) * 180,
+      delay: i * 50,
+    }
+  })
+}, [])
 
   return (
     <section
