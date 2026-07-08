@@ -13,23 +13,27 @@ type Badge = {
 }
 
 const badges: Badge[] = [
-  { label: 'Brand Identity',     top: '8%',  left: '50%', rotate: -4, fx: 0,    fy: 170,  delay: 60 },
+  { label: 'Brand Identity',     top: '4%',  left: '50%', rotate: -4, fx: 0,    fy: 190,  delay: 40 },
 
-  { label: 'Logo Design',        top: '18%', left: '73%', rotate: -8, fx: -140, fy: 130,  delay: 100 },
+  { label: 'Logo Design',        top: '12%', left: '72%', rotate: -8, fx: -150, fy: 160,  delay: 80 },
 
-  { label: 'Packaging Design',   top: '38%', left: '86%', rotate: 6,  fx: -170, fy: 20,   delay: 140 },
+  { label: 'Packaging Design',   top: '28%', left: '88%', rotate: 6,  fx: -190, fy: 70,   delay: 120 },
 
-  { label: 'Label Design',       top: '66%', left: '79%', rotate: 8,  fx: -140, fy: -90,  delay: 180 },
+  { label: 'Label Design',       top: '50%', left: '91%', rotate: 8,  fx: -200, fy: 0,    delay: 160 },
 
-  { label: 'Visual Design',      top: '84%', left: '62%', rotate: -8, fx: -60,  fy: -150, delay: 220 },
+  { label: 'Visual Design',      top: '72%', left: '84%', rotate: -8, fx: -170, fy: -90,  delay: 200 },
 
-  { label: 'Brochure Design',    top: '84%', left: '38%', rotate: 6,  fx: 60,   fy: -150, delay: 260 },
+  { label: 'Brochure Design',    top: '90%', left: '64%', rotate: 5,  fx: -80,  fy: -180, delay: 240 },
 
-  { label: 'Pitch Deck Design',  top: '66%', left: '21%', rotate: -6, fx: 140,  fy: -90,  delay: 300 },
+  { label: 'Social Media Design',top: '90%', left: '36%', rotate: -5, fx: 80,   fy: -180, delay: 280 },
 
-  { label: 'Business Cards',     top: '38%', left: '14%', rotate: 6,  fx: 170,  fy: 20,   delay: 340 },
+  { label: 'Pitch Deck Design',  top: '72%', left: '16%', rotate: 8,  fx: 170,  fy: -90,  delay: 320 },
 
-  { label: 'Branding',           top: '18%', left: '27%', rotate: -8, fx: 140,  fy: 130,  delay: 380 },
+  { label: 'Business Cards',     top: '50%', left: '9%',  rotate: -8, fx: 200,  fy: 0,    delay: 360 },
+
+  { label: 'Stationery Design',  top: '28%', left: '12%', rotate: 6,  fx: 190,  fy: 70,   delay: 400 },
+
+  { label: 'Brand Guidelines',   top: '12%', left: '28%', rotate: -6, fx: 150,  fy: 160,  delay: 440 },
 ]
 
 export function WhatIBring() {
