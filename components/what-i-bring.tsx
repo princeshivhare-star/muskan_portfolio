@@ -112,7 +112,7 @@ export function WhatIBring() {
           }}
         />
 
-        <h2 className="font-script text-[3.5rem] font-normal leading-[0.95] text-blue-brand">
+        <h2 className="text-center font-script text-[4.2rem] font-normal leading-[0.95] text-[#0F1E73] md:text-[5rem] lg:text-[5.8rem]">
           What I bring
           <br />
           to the table
