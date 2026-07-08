@@ -23,12 +23,12 @@ export default function HomePage() {
             identities.
           </p>
 
-          <h2 className="mt-8 text-[2.2rem] font-bold leading-[1.08] tracking-[-0.04em] md:text-[3.7rem] lg:text-[4.8rem] xl:text-[5.4rem]">
-            <span className="block">
+          <h2 className="mt-8 text-[2rem] font-bold leading-[1.05] tracking-[-0.04em] md:text-[3.1rem] lg:text-[4rem] xl:text-[4.6rem]">
+            <span className="block whitespace-nowrap">
               I build distinctive brand worlds that
             </span>
 
-            <span className="block">
+            <span className="block whitespace-nowrap">
               make businesses easier to{' '}
               <span className="font-script font-normal text-blue-brand">
                 recognise
@@ -36,7 +36,7 @@ export default function HomePage() {
               ,
             </span>
 
-            <span className="block">
+            <span className="block whitespace-nowrap">
               easier to{' '}
               <span className="font-script font-normal text-yellow-brand">
                 trust
