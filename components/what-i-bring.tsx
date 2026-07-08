@@ -13,27 +13,17 @@ type Badge = {
 }
 
 const badges: Badge[] = [
-  { label: 'Brand Identity',     top: '4%',  left: '50%', rotate: -4, fx: 0,    fy: 190,  delay: 40 },
-
-  { label: 'Logo Design',        top: '12%', left: '72%', rotate: -8, fx: -150, fy: 160,  delay: 80 },
-
-  { label: 'Packaging Design',   top: '28%', left: '88%', rotate: 6,  fx: -190, fy: 70,   delay: 120 },
-
-  { label: 'Label Design',       top: '50%', left: '91%', rotate: 8,  fx: -200, fy: 0,    delay: 160 },
-
-  { label: 'Visual Design',      top: '72%', left: '84%', rotate: -8, fx: -170, fy: -90,  delay: 200 },
-
-  { label: 'Brochure Design',    top: '90%', left: '64%', rotate: 5,  fx: -80,  fy: -180, delay: 240 },
-
-  { label: 'Social Media Design',top: '90%', left: '36%', rotate: -5, fx: 80,   fy: -180, delay: 280 },
-
-  { label: 'Pitch Deck Design',  top: '72%', left: '16%', rotate: 8,  fx: 170,  fy: -90,  delay: 320 },
-
-  { label: 'Business Cards',     top: '50%', left: '9%',  rotate: -8, fx: 200,  fy: 0,    delay: 360 },
-
-  { label: 'Stationery Design',  top: '28%', left: '12%', rotate: 6,  fx: 190,  fy: 70,   delay: 400 },
-
-  { label: 'Brand Guidelines',   top: '12%', left: '28%', rotate: -6, fx: 150,  fy: 160,  delay: 440 },
+  { label: 'Brand Identity', top: '5%', left: '50%', rotate: -8, fx: 0, fy: 190, delay: 40 },
+  { label: 'Logo Design', top: '13%', left: '75%', rotate: -7, fx: -150, fy: 150, delay: 80 },
+  { label: 'Packaging Design', top: '31%', left: '88%', rotate: 6, fx: -190, fy: 70, delay: 120 },
+  { label: 'Label Design', top: '55%', left: '88%', rotate: 8, fx: -200, fy: 0, delay: 160 },
+  { label: 'Branding', top: '72%', left: '76%', rotate: 9, fx: -160, fy: -90, delay: 200 },
+  { label: 'Visual Design', top: '87%', left: '61%', rotate: -10, fx: -80, fy: -170, delay: 240 },
+  { label: 'Brochure Design', top: '88%', left: '39%', rotate: -4, fx: 70, fy: -170, delay: 280 },
+  { label: 'Social Media Design', top: '72%', left: '24%', rotate: 6, fx: 160, fy: -90, delay: 320 },
+  { label: 'Pitch Deck Design', top: '55%', left: '12%', rotate: -5, fx: 200, fy: 0, delay: 360 },
+  { label: 'Business Cards', top: '31%', left: '12%', rotate: -6, fx: 190, fy: 70, delay: 400 },
+  { label: 'Brand Guidelines', top: '13%', left: '25%', rotate: 7, fx: 150, fy: 150, delay: 440 },
 ]
 
 export function WhatIBring() {
@@ -64,7 +54,7 @@ export function WhatIBring() {
       aria-label="What I bring to the table"
       className="mx-auto max-w-6xl overflow-hidden px-5 pt-6 pb-16 md:px-8 md:pt-10 md:pb-24"
     >
-      <div className="relative min-h-[620px] md:min-h-[620px]">
+      <div className="relative min-h-[650px] md:min-h-[680px]">
         {badges.map((badge) => (
           <span
             key={badge.label}
@@ -83,7 +73,6 @@ export function WhatIBring() {
           </span>
         ))}
 
-        {/* Center Content */}
         <div
           className="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-out"
           style={{
@@ -94,7 +83,7 @@ export function WhatIBring() {
           <img
             src="/logo.png"
             alt="Logo"
-            className="mb-4 h-auto w-20 md:mb-5 md:w-28 lg:w-35"
+            className="mb-4 h-auto w-20 md:mb-5 md:w-28 lg:w-32"
           />
 
           <h2 className="text-center font-script text-[3.2rem] font-normal leading-[0.95] text-[#0F1E73] md:text-[5rem] lg:text-[5.8rem]">
