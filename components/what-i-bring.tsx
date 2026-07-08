@@ -20,8 +20,8 @@ const badges: Badge[] = [
   { label: 'Business Cards', top: '45%', left: '11%', rotate: -6, fx: 180, fy: 40, delay: 100 },
   { label: 'Branding', top: '65%', left: '79%', rotate: 8, fx: -160, fy: -80, delay: 260 },
   { label: 'Pitch Deck Design', top: '69%', left: '14%', rotate: 4, fx: 160, fy: -70, delay: 200 },
-  { label: 'Visual Design', top: '84%', left: '66%', rotate: -14, fx: -80, fy: -150, delay: 320 },
-  { label: 'Brochure Design', top: '86%', left: '38%', rotate: -4, fx: 60, fy: -160, delay: 340 },
+  { label: 'Visual Design', top: '86%', left: '66%', rotate: -14, fx: -80, fy: -150, delay: 320 },
+  { label: 'Brochure Design', top: '88%', left: '38%', rotate: -4, fx: 60, fy: -160, delay: 340 },
 ]
 
 export function WhatIBring() {
