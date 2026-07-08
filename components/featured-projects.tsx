@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { nocaffCover } from '@/lib/nocaff'
 import { peherCover } from '@/lib/peher'
 
 const projects = [
@@ -9,6 +10,13 @@ const projects = [
     category: 'Visual Identity / Fashion Apparel',
     year: '2025',
     cover: peherCover,
+  },
+  {
+    slug: 'nocaff',
+    title: 'NOCAFF',
+    category: 'Brand Identity / Packaging / Beverage',
+    year: '2026',
+    cover: nocaffCover,
   },
 ]
 

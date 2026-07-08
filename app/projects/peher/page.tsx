@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 function CaseImage({ index }: { index: number }) {
   const img = peherImages[index]
   return (
-    <figure className="overflow-hidden rounded-2xl bg-secondary">
+    <figure className="w-full overflow-hidden rounded-2xl bg-secondary">
       {/* Full image shown without cropping — intrinsic aspect ratio preserved */}
       <Image
         src={img.src || '/placeholder.svg'}
@@ -171,11 +171,10 @@ export default function PeherPage() {
             <CaseImage index={1} />
             {/* 3 — Logo construction */}
             <CaseImage index={2} />
-            {/* 4 + 8 — Shopping bag / gift box, side by side like the reference */}
-            <div className="grid grid-cols-2 gap-6">
-              <CaseImage index={3} />
-              <CaseImage index={7} />
-            </div>
+            {/* 4 — Shopping bag */}
+            <CaseImage index={3} />
+            {/* 8 — Gift box */}
+            <CaseImage index={7} />
             {/* 5 — Brand story / artisans */}
             <CaseImage index={4} />
             {/* 6 — Hang tags */}
