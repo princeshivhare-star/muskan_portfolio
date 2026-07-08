@@ -59,11 +59,11 @@ export function WhatIBring() {
       let left = 50 + radiusX * Math.cos(angle)
 
       if (label === 'Visual Design') {
-        top -= 5
+        top -= 10
       }
 
       if (label === 'Brochure Design') {
-        top -= 5
+        top -= 10
       }
 
       return {
