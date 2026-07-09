@@ -5,41 +5,60 @@ export function Hero() {
   return (
     <section
       id="about"
-      className="relative min-h-screen overflow-hidden bg-black px-5 pt-8 pb-10 text-center text-white"
+      className="relative overflow-hidden bg-background px-5 pt-24 pb-16 md:px-8 md:pt-32 md:pb-24"
     >
-      {/* Name */}
-      <h1 className="relative z-20 mx-auto text-[3rem] font-black uppercase leading-[0.82] tracking-[-0.06em] md:text-[5rem] lg:text-[7rem] xl:text-[8.5rem]">
-        Muskan Varotaria
-      </h1>
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        {/* Text */}
+        <div className="text-center lg:text-left">
+          <p className="text-xs font-medium tracking-[0.28em] uppercase text-muted-foreground">
+            Brand &amp; Visual Identity Designer
+          </p>
 
-      {/* Portrait */}
-      <div className="relative z-10 mx-auto -mt-2 flex justify-center md:-mt-4 lg:-mt-6">
-        <div className="relative h-[280px] w-[200px] overflow-hidden rounded-t-[120px] bg-[#ff2b1f] md:h-[360px] md:w-[260px] md:rounded-t-[150px] lg:h-[440px] lg:w-[320px] lg:rounded-t-[180px]">
-          <Image
-            src="/muskan.png"
-            alt="Muskan Varotaria"
-            fill
-            priority
-            className="object-cover object-top"
-          />
+          <h1 className="mt-6 text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-balance md:text-7xl lg:text-[5.8rem]">
+            Muskan
+            <br />
+            Varotaria
+          </h1>
+
+          <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty md:text-lg lg:mx-0 mx-auto">
+            I turn smart ideas into brands people notice, trust and choose.
+          </p>
+
+          <div className="mt-9 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <Link
+              href="/#projects"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-transform hover:scale-105"
+            >
+              View Projects
+              <span aria-hidden="true">→</span>
+            </Link>
+
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-foreground px-7 py-3.5 text-sm font-semibold text-foreground transition hover:bg-foreground hover:text-background"
+            >
+              Let&apos;s Work Together
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="relative flex justify-center lg:justify-end">
+          <div className="absolute right-8 top-10 h-72 w-72 rounded-full bg-lilac-brand/20 blur-3xl" />
+          <div className="absolute bottom-8 right-20 h-64 w-64 rounded-full bg-yellow-brand/20 blur-3xl" />
+
+          <div className="relative h-[390px] w-[300px] overflow-hidden rounded-t-[160px] rounded-b-[36px] bg-secondary shadow-sm md:h-[500px] md:w-[380px] lg:h-[560px] lg:w-[420px]">
+            <Image
+              src="/muskan.png"
+              alt="Muskan Varotaria"
+              fill
+              priority
+              className="object-cover object-center"
+            />
+          </div>
         </div>
       </div>
-
-      {/* Description */}
-      <p className="relative z-20 mx-auto mt-6 max-w-3xl text-[1.2rem] font-black uppercase leading-[1] tracking-[-0.04em] md:text-[1.8rem] lg:text-[2.3rem]">
-        I'M MUSKAN, A PASSIONATE VISUALLY STRIKING
-        <br />
-        AND USER-FRIENDLY DESIGNER.
-      </p>
-
-      {/* Button */}
-      <Link
-        href="/#contact"
-        className="relative z-20 mt-10 inline-flex items-center gap-3 rounded-full bg-white/15 px-6 py-3 text-base font-medium text-white transition hover:bg-white hover:text-black"
-      >
-        Let's Work Together
-        <span aria-hidden="true">→</span>
-      </Link>
     </section>
   )
 }
