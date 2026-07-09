@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { nocaffCover } from '@/lib/nocaff'
 import { peherCover } from '@/lib/peher'
+import { clubduelzCover } from '@/lib/clubduelz'
 
 const projects = [
   {
@@ -17,6 +18,13 @@ const projects = [
     category: 'Brand Identity / Packaging / Beverage',
     year: '2026',
     cover: nocaffCover,
+  },
+  {
+    slug: 'clubduelz',
+    title: 'ClubDuelz',
+    category: 'Brand Identity / Sports App / Football Platform',
+    year: '2025',
+    cover: clubduelzCover,
   },
 ]
 
