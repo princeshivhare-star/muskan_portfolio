@@ -17,45 +17,40 @@ export default function HomePage() {
         <ProjectReel />
 
         {/* Main positioning statement */}
-<section className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
-  <h2 className="max-w-6xl text-[1.85rem] font-semibold leading-[1.2] tracking-[-0.04em] text-balance md:text-[3rem] lg:text-[3.75rem] xl:text-[4.25rem]">
-    {/* Line 1 */}
-    <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-blue-brand">
+<section className="mx-auto flex justify-center px-6 py-16 md:px-10 md:py-24">
+  <h2 className="max-w-[950px] text-center text-[1.45rem] font-semibold leading-[1.15] tracking-[-0.04em] md:text-[2.4rem] lg:text-[3.15rem] xl:text-[3.5rem]">
+    <span className="font-dribelland text-[1.65em] font-normal leading-none tracking-normal text-blue-brand">
       Four years,
     </span>{' '}
-    <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-yellow-brand">
+    <span className="font-dribelland text-[1.65em] font-normal leading-none tracking-normal text-yellow-brand">
       plenty of pixels
     </span>{' '}
     and no room
     <br />
 
-    {/* Line 2 */}
     for forgettable{' '}
-    <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-lilac-brand">
+    <span className="font-dribelland text-[1.65em] font-normal leading-none tracking-normal text-lilac-brand">
       brand identities
     </span>
     .
     <br />
 
-    {/* Line 3 */}
     I build{' '}
-    <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-blue-brand">
+    <span className="font-dribelland text-[1.65em] font-normal leading-none tracking-normal text-blue-brand">
       distinctive
     </span>{' '}
     brand worlds that
     <br />
 
-    {/* Line 4 */}
     make businesses easier to{' '}
-    <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-yellow-brand">
+    <span className="font-dribelland text-[1.65em] font-normal leading-none tracking-normal text-yellow-brand">
       recognise
     </span>
     ,
     <br />
 
-    {/* Line 5 */}
     easier to{' '}
-    <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-lilac-brand">
+    <span className="font-dribelland text-[1.65em] font-normal leading-none tracking-normal text-lilac-brand">
       trust
     </span>{' '}
     and much harder to forget.
