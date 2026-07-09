@@ -1,32 +1,64 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export function Hero() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center px-5 pt-24 pb-14 text-center md:pt-36 md:pb-20"
+      className="relative overflow-hidden bg-[#faf7f2] px-6 pt-28 pb-16 md:px-10 md:pt-36 md:pb-24"
     >
-      <p className="text-xs font-medium tracking-[0.3em] uppercase text-muted-foreground">
-        Brand &amp; Visual Identity Designer
-      </p>
+      {/* Background Glow */}
+      <div className="absolute right-0 top-20 h-[520px] w-[520px] rounded-full bg-[#cbb6ff]/20 blur-[140px]" />
+      <div className="absolute bottom-0 right-20 h-[420px] w-[420px] rounded-full bg-[#ffd77a]/20 blur-[120px]" />
 
-      <h1 className="mt-6 text-6xl font-bold leading-[0.95] tracking-tight text-balance md:text-8xl lg:text-[9rem]">
-        Muskan
-        <br />
-        Varotaria
-      </h1>
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        {/* LEFT */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground">
+            Brand &amp; Visual Identity Designer
+          </p>
 
-      <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty md:text-lg">
-        I turn smart ideas into brands people notice, trust and choose.
-      </p>
+          <h1 className="mt-8 text-[4rem] font-bold leading-[0.9] tracking-[-0.05em] md:text-[6rem] lg:text-[7.5rem]">
+            Muskan
+            <br />
+            Varotaria
+          </h1>
 
-      <Link
-        href="/#contact"
-        className="mt-10 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-transform hover:scale-105"
-      >
-        Let&apos;s Work Together
-        <span aria-hidden="true">→</span>
-      </Link>
+          <p className="mt-8 max-w-md text-lg leading-8 text-muted-foreground">
+            I turn smart ideas into brands people notice,
+            trust and choose through thoughtful visual
+            identity and branding.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="#projects"
+              className="rounded-full bg-black px-7 py-4 text-sm font-semibold text-white transition hover:scale-105"
+            >
+              View Projects →
+            </Link>
+
+            <Link
+              href="#contact"
+              className="rounded-full border border-black px-7 py-4 text-sm font-semibold transition hover:bg-black hover:text-white"
+            >
+              Let's Talk →
+            </Link>
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="relative flex justify-center lg:justify-end">
+          <Image
+            src="/muskan.png"
+            alt="Muskan Varotaria"
+            width={700}
+            height={900}
+            priority
+            className="relative z-10 w-full max-w-[620px] object-contain"
+          />
+        </div>
+      </div>
     </section>
   )
 }
