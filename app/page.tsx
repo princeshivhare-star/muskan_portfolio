@@ -18,35 +18,30 @@ export default function HomePage() {
 
         {/* Main positioning statement */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
-          <p className="font-script text-2xl text-yellow-brand md:text-3xl">
-            Four years, plenty of pixels and no room for forgettable brand
-            identities.
-          </p>
-
-          <h2 className="mt-8 text-[2rem] font-bold leading-[1.05] tracking-[-0.04em] md:text-[3.1rem] lg:text-[4rem] xl:text-[4.6rem]">
-            <span className="block whitespace-nowrap">
-              I build distinctive brand worlds that
+          <h2 className="max-w-6xl text-[1.85rem] font-semibold leading-[1.2] tracking-[-0.04em] text-balance md:text-[3rem] lg:text-[3.75rem] xl:text-[4.25rem]">
+            <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-blue-brand">
+              Four years,
+            </span>{' '}
+            <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-yellow-brand">
+              plenty of pixels
+            </span>{' '}
+            and no room for forgettable{' '}
+            <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-lilac-brand">
+              brand identities
             </span>
-
-            <span className="block whitespace-nowrap">
-              make businesses easier to{' '}
-              <span className="font-script font-normal text-blue-brand">
-                recognise
-              </span>
-              ,
+            . I build{' '}
+            <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-blue-brand">
+              distinctive
+            </span>{' '}
+            brand worlds that make businesses easier to{' '}
+            <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-yellow-brand">
+              recognise
             </span>
-
-            <span className="block whitespace-nowrap">
-              easier to{' '}
-              <span className="font-script font-normal text-yellow-brand">
-                trust
-              </span>{' '}
-              and much harder to{' '}
-              <span className="font-script font-normal text-lilac-brand">
-                forget
-              </span>
-              .
-            </span>
+            , easier to{' '}
+            <span className="inline-block font-dribelland text-[1.77em] font-normal leading-[1.05] tracking-normal text-lilac-brand">
+              trust
+            </span>{' '}
+            and much harder to forget.
           </h2>
         </section>
 

@@ -1,19 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Archivo, Caveat, Instrument_Serif } from 'next/font/google'
+import { Instrument_Serif } from 'next/font/google'
 import './globals.css'
-
-const archivo = Archivo({
-  subsets: ['latin'],
-  variable: '--font-archivo',
-  display: 'swap',
-})
-
-const caveat = Caveat({
-  subsets: ['latin'],
-  variable: '--font-caveat',
-  display: 'swap',
-})
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -43,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-background ${archivo.variable} ${caveat.variable} ${instrumentSerif.variable}`}
+      className={`bg-background ${instrumentSerif.variable}`}
     >
       <body className="antialiased">
         {children}

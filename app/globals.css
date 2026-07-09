@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'Dribelland';
+  src: url('/fonts/Dribelland.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
 
 @theme inline {
   --color-ring: var(--ring);
@@ -29,9 +38,10 @@
   --color-peher-green: var(--peher-green);
   --color-peher-sage: var(--peher-sage);
   --color-peher-cream: var(--peher-cream);
-  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-sans: 'Stack Sans Text', system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), Georgia, serif;
-  --font-script: var(--font-caveat), cursive;
+  --font-script: 'Dribelland', cursive;
+  --font-dribelland: 'Dribelland', cursive;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -105,6 +115,14 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+}
+
+.font-dribelland {
+  font-family: 'Dribelland', cursive;
+}
+
+.font-stack-sans {
+  font-family: 'Stack Sans Text', system-ui, sans-serif;
 }
 
 @keyframes marquee {
