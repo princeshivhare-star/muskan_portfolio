@@ -2,20 +2,32 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { nocaffImages } from '@/lib/nocaff'
 import { peherImages } from '@/lib/peher'
+import { clubduelzImages } from '@/lib/clubduelz'
 
 const reelImages = [
   { image: peherImages[10], href: '/projects/peher' },
   { image: nocaffImages[0], href: '/projects/nocaff' },
+  { image: clubduelzImages[11], href: '/projects/clubduelz' }, // 12.png
+
   { image: peherImages[3], href: '/projects/peher' },
   { image: nocaffImages[7], href: '/projects/nocaff' },
+  { image: clubduelzImages[4], href: '/projects/clubduelz' }, // 5.png
+
   { image: peherImages[6], href: '/projects/peher' },
   { image: nocaffImages[2], href: '/projects/nocaff' },
+  { image: clubduelzImages[8], href: '/projects/clubduelz' }, // 9.png
+
   { image: peherImages[0], href: '/projects/peher' },
   { image: nocaffImages[11], href: '/projects/nocaff' },
+  { image: clubduelzImages[1], href: '/projects/clubduelz' }, // 2.png
+
   { image: peherImages[9], href: '/projects/peher' },
   { image: nocaffImages[13], href: '/projects/nocaff' },
+  { image: clubduelzImages[13], href: '/projects/clubduelz' }, // 14.png
+
   { image: peherImages[5], href: '/projects/peher' },
   { image: nocaffImages[15], href: '/projects/nocaff' },
+  { image: clubduelzImages[6], href: '/projects/clubduelz' }, // 7.png
 ]
 
 export function ProjectReel() {
