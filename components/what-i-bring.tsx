@@ -115,7 +115,7 @@ export function WhatIBring() {
           <img
             src="/logo.png"
             alt="Logo"
-            className="mb-5 h-auto w-24 md:w-32 lg:w-36"
+            className="mb-5 h-auto w-28 md:w-36 lg:w-40"
           />
 
           <h2 className="text-center font-script text-[3.2rem] font-normal leading-[0.82] text-foreground md:text-[5rem] lg:text-[5.8rem]">
