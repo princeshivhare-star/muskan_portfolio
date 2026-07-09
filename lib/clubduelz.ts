@@ -16,4 +16,4 @@ export const clubduelzImages = [
   { src: '/projects/clubduelz/15.png', alt: 'ClubDuelz image 15' },
 ]
 
-export const clubduelzCover = clubduelzImages[12]
+export const clubduelzCover = clubduelzImages[11]
