@@ -8,21 +8,39 @@ export function Hero() {
     >
       <div className="relative mx-auto flex w-full max-w-[1500px] flex-col items-center text-center">
         {/* Name */}
-        <h1 className="relative z-20 font-sans text-[4rem] font-normal leading-[0.84] tracking-[-0.065em] text-foreground sm:text-[5rem] md:text-[6rem] lg:text-[7rem]">
+        <h1 className="relative z-20 mb-6 font-sans text-[4rem] font-normal leading-[0.84] tracking-[-0.065em] text-foreground sm:mb-8 sm:text-[5rem] md:mb-10 md:text-[6rem] lg:text-[7rem]">
           Muskan
         </h1>
 
         {/* Muskan logo image */}
-        <div className="relative z-10 -mt-8 flex w-full justify-center sm:-mt-10 md:-mt-12 lg:-mt-14">
+        <div className="relative z-10 flex w-full justify-center">
           <img
             src="/muskan-logo.png"
             alt="Muskan portrait inside the brand logo"
-            className="h-auto w-[95%] max-w-[760px] object-contain transition-transform duration-700 ease-out hover:scale-[1.015] sm:w-[82%] md:w-[70%] lg:w-[620px]"
+            className="
+              h-auto
+              w-[88%]
+              max-w-[620px]
+              object-contain
+              mix-blend-multiply
+              contrast-[1.06]
+              saturate-[1.04]
+              transition-transform
+              duration-700
+              ease-out
+              hover:scale-[1.015]
+              sm:w-[76%]
+              sm:max-w-[680px]
+              md:w-[64%]
+              md:max-w-[720px]
+              lg:w-[56%]
+              lg:max-w-[760px]
+            "
           />
         </div>
 
         {/* Supporting labels */}
-        <div className="-mt-8 grid w-full max-w-[700px] grid-cols-2 gap-10 text-left sm:-mt-10 sm:gap-20 md:-mt-12">
+        <div className="mt-3 grid w-full max-w-[900px] grid-cols-2 gap-10 text-left sm:mt-2 sm:gap-20 md:mt-0">
           <p className="text-[1.2rem] font-normal leading-[0.9] tracking-[-0.04em] text-foreground sm:text-[1.45rem] md:text-[1.7rem]">
             Visual &amp;
             <br />
@@ -39,7 +57,7 @@ export function Hero() {
         </div>
 
         {/* Introduction */}
-        <p className="mt-1 max-w-[620px] font-dribelland text-[1.8rem] font-normal leading-[0.8] tracking-normal text-foreground sm:text-[2.15rem] md:text-[2.55rem]">
+        <p className="mt-2 max-w-[620px] font-dribelland text-[1.8rem] font-normal leading-[0.8] tracking-normal text-foreground sm:text-[2.15rem] md:text-[2.55rem]">
           I turn smart ideas into brands
           <br className="hidden sm:block" />
           people notice, trust and choose.
