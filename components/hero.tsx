@@ -30,7 +30,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex w-full max-w-[1500px] flex-col items-center text-center">
         {/* Name */}
-        <h1 className="relative z-20 font-sans text-[4rem] font-normal leading-[0.84] tracking-[-0.065em] text-foreground sm:text-[5rem] md:text-[6rem] lg:text-[7rem]">
+        <h1 className="relative z-20 -mb-4 font-sans text-[4rem] font-normal leading-[0.84] tracking-[-0.065em] text-foreground sm:-mb-6 sm:text-[5rem] md:-mb-8 md:text-[6rem] lg:text-[7rem]">
           Muskan
         </h1>
 
@@ -56,15 +56,15 @@ export function Hero() {
                 src="/muskan-original.png"
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-[0.9] object-cover object-[center_50%] blur-[0.5px] transition-transform duration-700 ease-out group-hover:scale-[0.94]"
+                className="absolute inset-0 h-full w-full scale-[0.9] object-cover object-[center_42%] blur-[0.5px] transition-transform duration-700 ease-out group-hover:scale-[0.94]"
               />
 
-              {/* Clear Muskan portrait */}
+              {/* Clear Muskan portrait moved upward */}
               <img
                 src="/muskan-original.png"
                 alt=""
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 h-[56%] w-auto max-w-none -translate-x-1/2 -translate-y-[30%] object-contain transition-transform duration-700 ease-out group-hover:-translate-y-[32%] group-hover:scale-[1.015]"
+                className="absolute left-1/2 top-1/2 h-[56%] w-auto max-w-none -translate-x-1/2 -translate-y-[48%] object-contain transition-transform duration-700 ease-out group-hover:-translate-y-[50%] group-hover:scale-[1.015]"
               />
             </div>
 
