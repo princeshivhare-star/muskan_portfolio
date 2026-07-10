@@ -35,8 +35,8 @@ export function Hero() {
         </h1>
 
         {/* Portrait clipped inside actual logo */}
-        <div className="group relative z-10 mt-2 w-full max-w-[680px] sm:max-w-[760px] md:-mt-1 md:max-w-[840px]">
-          <div className="relative aspect-[2.55/1] w-full">
+        <div className="group relative z-10 mt-1 w-full max-w-[820px] sm:max-w-[920px] md:-mt-2 md:max-w-[1050px] lg:max-w-[1150px]">
+          <div className="relative aspect-[2.7/1] w-full">
             {/* Soft offset logo shadow */}
             <div
               aria-hidden="true"
