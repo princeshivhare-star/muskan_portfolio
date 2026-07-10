@@ -35,8 +35,8 @@ export function Hero() {
         </h1>
 
         {/* Portrait clipped inside actual logo */}
-        <div className="group relative z-10 mt-2 w-full max-w-[560px] sm:max-w-[640px] md:-mt-1 md:max-w-[700px]">
-          <div className="relative aspect-[2.35/1] w-full">
+        <div className="group relative z-10 mt-2 w-full max-w-[680px] sm:max-w-[760px] md:-mt-1 md:max-w-[840px]">
+          <div className="relative aspect-[2.55/1] w-full">
             {/* Soft offset logo shadow */}
             <div
               aria-hidden="true"
@@ -64,7 +64,7 @@ export function Hero() {
                 src="/muskan-original.png"
                 alt=""
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 h-[120%] w-auto max-w-none -translate-x-1/2 -translate-y-[48%] object-contain transition-transform duration-700 ease-out group-hover:-translate-y-[50%] group-hover:scale-[1.03]"
+                className="absolute left-1/2 top-1/2 h-[96%] w-auto max-w-none -translate-x-1/2 -translate-y-[42%] object-contain transition-transform duration-700 ease-out group-hover:-translate-y-[44%] group-hover:scale-[1.02]"
               />
             </div>
 
