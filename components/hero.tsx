@@ -19,21 +19,22 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-[1550px] px-0 lg:px-12 xl:px-16">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-6">
+        <div className="grid items-start gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-6">
           {/* Left content */}
           <div className="relative z-20 flex flex-col items-start text-left lg:translate-x-4 xl:translate-x-6">
-            {/* Shared alignment boundary — every block below shares this exact width,
-                so left/right edges line up the same way they do in the reference */}
-            <div className="w-full lg:w-[570px] xl:w-[610px]">
+            {/* Headline + labels share one shrink-wrapped box, sized to the
+                actual rendered width of "Muskan" — so the label row below
+                always spans exactly the headline's width, at any breakpoint */}
+            <div className="flex w-full flex-col items-start lg:w-fit">
               {/* Name */}
               <h1 className="font-sans text-[4.5rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[6rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[10rem]">
                 Muskan
               </h1>
 
-              {/* Labels — justify-between on the SAME width box as the paragraph
-                  below, so "Emerging designer" lands on the identical right edge
-                  as "...help your business become the obvious choice." */}
-              <div className="mt-7 flex w-full items-start justify-between">
+              {/* Labels — justify-between spans exactly the headline's own
+                  width, so "Emerging designer" lands flush with the end
+                  of "Muskan" (the 'n'), not some arbitrary further-right point */}
+              <div className="mt-7 flex w-full items-start justify-between gap-6">
                 <p className="text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem]">
                   Visual &amp;
                   <br />
@@ -42,13 +43,16 @@ export function Hero() {
                   Designer
                 </p>
 
-                <p className="text-right text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem] xl:text-[2rem]">
+                <p className="text-left text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem] xl:text-[2rem]">
                   Emerging
                   <br />
                   designer
                 </p>
               </div>
+            </div>
 
+            {/* Paragraph + buttons keep their own fixed-width box for wrapping/layout */}
+            <div className="w-full lg:w-[570px] xl:w-[610px]">
               {/* Introduction */}
               <p className="mt-10 w-full font-dribelland text-[1.75rem] font-normal leading-[0.94] tracking-normal text-foreground sm:text-[2rem] lg:mt-12 lg:text-[2.05rem] xl:text-[2.15rem]">
                 <span className="hidden whitespace-nowrap lg:block">
