@@ -17,7 +17,7 @@ export function Hero() {
       <div className="relative mx-auto flex w-full max-w-[1550px] flex-col items-center px-0 text-center lg:px-12 xl:px-16">
         {/* Positioning context spans the FULL section width, so the side
             labels can sit at the true left/right edges of the page,
-            independent of the headline block's own (narrower) width */}
+            independent of the headline+logo block's own (narrower) width */}
         <div className="relative w-full">
           {/* Left label — pinned to the far edge of the section */}
           <p className="absolute left-0 top-1/2 hidden -translate-y-1/2 text-left font-sans text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:block lg:text-[1.7rem]">
@@ -37,11 +37,10 @@ export function Hero() {
             Designer
           </p>
 
-          {/* Headline defines the intrinsic width of this shrink-wrapped
-              box (via whitespace-nowrap). Logo and paragraph are BOTH set
-              to w-full inside this same box, so they always match the
-              headline's exact rendered width — at any breakpoint, with
-              zero hardcoded pixel values to keep in sync. */}
+          {/* Headline sets the width of this shrink-wrapped box; the logo
+              below is sized as a PERCENTAGE of that width and centered,
+              so it reads as a smaller mark under the name rather than
+              stretching edge-to-edge with "Muskan" */}
           <div className="mx-auto w-fit">
             <h1 className="whitespace-nowrap font-sans text-[3.8rem] font-normal leading-[0.78] tracking-[-0.01em] text-foreground sm:text-[5rem] md:text-[6rem] lg:text-[7.2rem] xl:text-[8.5rem]">
               Muskan
@@ -51,9 +50,10 @@ export function Hero() {
               src="/muskan-logo.png"
               alt="Muskan portrait inside the brand logo"
               className="
+                mx-auto
                 mt-2
                 h-auto
-                w-full
+                w-[70%]
                 object-contain
                 mix-blend-multiply
                 contrast-[1.04]
@@ -61,15 +61,9 @@ export function Hero() {
                 transition-transform
                 duration-700
                 ease-out
-                hover:scale-[1.015]
+                hover:scale-[1.03]
               "
             />
-
-            <p className="mt-10 w-full font-sans text-[1.25rem] font-normal leading-[1.35] tracking-[-0.02em] text-foreground sm:text-[1.4rem] lg:mt-12 lg:text-[1.5rem]">
-              I turn ambitious ideas into memorable brands that capture
-              attention, earn trust and help your business become the
-              obvious choice.
-            </p>
           </div>
         </div>
 
@@ -91,6 +85,14 @@ export function Hero() {
             Designer
           </p>
         </div>
+
+        {/* Paragraph — hero section stays font-normal (Roman) throughout,
+            per your sitewide rule */}
+        <p className="mt-10 max-w-[560px] font-sans text-[1.25rem] font-normal leading-[1.35] tracking-[-0.02em] text-foreground sm:text-[1.4rem] lg:mt-12 lg:text-[1.5rem]">
+          I turn ambitious ideas into memorable brands that capture
+          attention, earn trust and help your business become the
+          obvious choice.
+        </p>
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 lg:mt-10">
