@@ -1,4 +1,4 @@
-```tsx
+
 // hero.tsx
 import Link from 'next/link'
 
@@ -153,4 +153,4 @@ export function Hero() {
     </section>
   )
 }
-```
+
