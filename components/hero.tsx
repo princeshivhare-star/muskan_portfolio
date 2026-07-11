@@ -16,12 +16,12 @@ export function Hero() {
         <div className="absolute -right-24 top-40 h-80 w-80 rounded-full bg-[#D9D0EA]/20 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1500px]">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6">
+      <div className="relative mx-auto w-full max-w-[1550px] px-0 lg:px-12 xl:px-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-4">
           {/* Left content */}
-          <div className="relative z-20 flex flex-col items-start text-left">
+          <div className="relative z-20 flex flex-col items-start text-left lg:translate-x-8 xl:translate-x-12">
             {/* Name */}
-            <h1 className="font-sans text-[4.5rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[6rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[9.5rem]">
+            <h1 className="font-sans text-[4.5rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[6rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[10rem]">
               Muskan
             </h1>
 
@@ -43,16 +43,14 @@ export function Hero() {
             </div>
 
             {/* Introduction */}
-            <p className="mt-12 max-w-[560px] font-dribelland text-[1.65rem] font-normal leading-[0.9] tracking-normal text-foreground sm:text-[2rem] lg:mt-14 lg:text-[2.3rem]">
-              I turn ambitious ideas into memorable brands that
+            <p className="mt-12 max-w-[560px] font-dribelland text-[2rem] font-normal leading-[0.82] tracking-normal text-foreground sm:text-[2.3rem] lg:mt-14 lg:text-[2.6rem]">
+              I turn smart ideas into brands
               <br className="hidden sm:block" />
-              capture attention, earn trust and help your
-              <br className="hidden sm:block" />
-              business become the obvious choice.
+              people notice, trust and choose.
             </p>
 
             {/* Buttons */}
-            <div className="mt-9 grid w-full max-w-[600px] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-7">
+            <div className="mt-12 grid w-full max-w-[600px] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-7">
               <Link
                 href="/#projects"
                 className="group inline-flex min-h-14 items-center justify-center gap-4 rounded-lg border border-blue-brand bg-blue-brand px-6 text-base font-normal text-white shadow-[0_10px_28px_rgba(108,147,255,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(108,147,255,0.25)] md:text-lg"
@@ -84,14 +82,14 @@ export function Hero() {
           </div>
 
           {/* Right logo image */}
-          <div className="relative z-10 flex items-center justify-center lg:justify-end">
+          <div className="relative z-10 flex items-center justify-center lg:-translate-x-4">
             <img
               src="/muskan-logo.png"
               alt="Muskan portrait inside the brand logo"
               className="
                 h-auto
                 w-full
-                max-w-[720px]
+                max-w-[840px]
                 object-contain
                 mix-blend-multiply
                 contrast-[1.04]
@@ -100,8 +98,10 @@ export function Hero() {
                 duration-700
                 ease-out
                 hover:scale-[1.015]
-                lg:max-w-[790px]
-                xl:max-w-[860px]
+                lg:w-[118%]
+                lg:max-w-[930px]
+                xl:w-[125%]
+                xl:max-w-[1020px]
               "
             />
           </div>
