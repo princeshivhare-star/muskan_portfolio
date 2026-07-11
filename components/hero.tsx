@@ -16,12 +16,32 @@ export function Hero() {
 
       <div className="relative mx-auto flex w-full max-w-[1550px] flex-col items-center px-0 text-center lg:px-12 xl:px-16">
         {/* Positioning context spans the FULL section width, so the side
-            labels sit at the true left/right edges of the page */}
+            labels can sit at the true left/right edges of the page,
+            independent of the headline+logo block's own (narrower) width */}
         <div className="relative w-full">
+          {/* Left label — pinned to the far edge of the section */}
+          <p className="absolute left-0 top-1/2 hidden -translate-y-1/2 text-left font-sans text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:block lg:text-[1.7rem]">
+            Visual &amp;
+            <br />
+            Brand Identity
+            <br />
+            Designer
+          </p>
+
+          {/* Right label — pinned to the far edge of the section */}
+          <p className="absolute right-0 top-1/2 hidden -translate-y-1/2 text-right font-sans text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:block lg:text-[1.7rem]">
+            Strategic
+            <br />
+            Emerging
+            <br />
+            Designer
+          </p>
+
           {/* Headline + logo share one shrink-wrapped box, sized to the
-              headline's own rendered width — image width always matches
-              the headline width exactly, and the gap between them is tight */}
-          <div className="relative mx-auto w-fit">
+              headline's own rendered width — the image is forced to that
+              same width, so their right edges always align exactly,
+              matching the reference */}
+          <div className="mx-auto w-fit">
             <h1 className="whitespace-nowrap font-sans text-[3.8rem] font-normal leading-[0.78] tracking-[-0.01em] text-foreground sm:text-[5rem] md:text-[6rem] lg:text-[7.2rem] xl:text-[8.5rem]">
               Muskan
             </h1>
@@ -30,7 +50,7 @@ export function Hero() {
               src="/muskan-logo.png"
               alt="Muskan portrait inside the brand logo"
               className="
-                mt-0.5
+                mt-2
                 h-auto
                 w-full
                 object-contain
@@ -43,31 +63,11 @@ export function Hero() {
                 hover:scale-[1.015]
               "
             />
-
-            {/* Left label — pinned to the bottom edge of the logo image,
-                anchored to the far left of the section (not the headline
-                box), matching the reference's lower label placement */}
-            <p className="absolute bottom-0 left-[-100vw] hidden w-[100vw] translate-y-1/2 pr-8 text-right font-sans text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:block lg:text-[1.7rem]">
-              Visual &amp;
-              <br />
-              Brand Identity
-              <br />
-              Designer
-            </p>
-
-            {/* Right label — pinned to the bottom edge of the logo image,
-                anchored to the far right of the section */}
-            <p className="absolute bottom-0 right-[-100vw] hidden w-[100vw] translate-y-1/2 pl-8 text-left font-sans text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:block lg:text-[1.7rem]">
-              Strategic
-              <br />
-              Emerging
-              <br />
-              Designer
-            </p>
           </div>
         </div>
 
-        {/* Mobile-only stacked labels (side labels are hidden below lg) */}
+        {/* Mobile-only stacked labels (side labels are hidden below lg,
+            since there's no room for them at the section edges) */}
         <div className="mt-6 flex w-full justify-between gap-6 lg:hidden">
           <p className="text-left font-sans text-[1.1rem] font-normal leading-[0.9] tracking-[-0.03em] text-foreground sm:text-[1.25rem]">
             Visual &amp;
@@ -85,7 +85,8 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Paragraph — hero section stays font-normal (Roman) throughout */}
+        {/* Paragraph — hero section stays font-normal (Roman) throughout,
+            per your sitewide rule */}
         <p className="mt-10 max-w-[560px] font-sans text-[1.25rem] font-normal leading-[1.35] tracking-[-0.02em] text-foreground sm:text-[1.4rem] lg:mt-12 lg:text-[1.5rem]">
           I turn ambitious ideas into memorable brands that capture
           attention, earn trust and help your business become the
