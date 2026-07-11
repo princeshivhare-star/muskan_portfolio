@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#F8F6F1] px-5 py-7 sm:px-8 md:py-9 lg:min-h-[520px] lg:px-12 lg:py-8"
+      className="relative overflow-hidden bg-[#F8F6F1] px-5 py-9 sm:px-8 md:py-11 lg:min-h-[600px] lg:px-12 lg:py-10"
     >
       {/* Soft background accents */}
       <div
@@ -27,15 +27,15 @@ export function Hero() {
                 always spans exactly the headline's width, at any breakpoint */}
             <div className="flex w-full flex-col items-start lg:w-fit">
               {/* Name */}
-              <h1 className="font-sans text-[3.4rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[4.5rem] md:text-[5.3rem] lg:text-[6.4rem] xl:text-[7.5rem]">
+              <h1 className="font-sans text-[3.8rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[5rem] md:text-[6rem] lg:text-[7.2rem] xl:text-[8.5rem]">
                 Muskan
               </h1>
 
               {/* Labels — justify-between spans exactly the headline's own
                   width, so "Emerging designer" lands flush with the end
                   of "Muskan" (the 'n'), not some arbitrary further-right point */}
-              <div className="mt-5 flex w-full items-start justify-between gap-6">
-                <p className="text-[1.1rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.3rem] lg:text-[1.5rem]">
+              <div className="mt-6 flex w-full items-start justify-between gap-6">
+                <p className="text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:text-[1.7rem]">
                   Visual &amp;
                   <br />
                   Brand Identity
@@ -43,7 +43,7 @@ export function Hero() {
                   Designer
                 </p>
 
-                <p className="text-left text-[1.1rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.5rem]">
+                <p className="text-left text-[1.25rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.45rem] lg:text-[1.7rem] xl:text-[1.7rem]">
                   Emerging
                   <br />
                   designer
@@ -52,9 +52,9 @@ export function Hero() {
             </div>
 
             {/* Paragraph + buttons keep their own fixed-width box for wrapping/layout */}
-            <div className="w-full lg:w-[430px] xl:w-[460px]">
+            <div className="w-full lg:w-[500px] xl:w-[530px]">
               {/* Introduction */}
-              <p className="mt-6 w-full font-dribelland text-[1.3rem] font-normal leading-[0.7] tracking-normal text-foreground sm:text-[1.5rem] lg:mt-7 lg:text-[1.55rem] xl:text-[1.6rem]">
+              <p className="mt-10 w-full font-dribelland text-[1.5rem] font-normal leading-[0.72] tracking-normal text-foreground sm:text-[1.7rem] lg:mt-12 lg:text-[1.8rem] xl:text-[1.85rem]">
                 <span className="hidden whitespace-nowrap lg:block">
                   I turn ambitious ideas into memorable brands that
                 </span>
@@ -79,10 +79,10 @@ export function Hero() {
               </p>
 
               {/* Buttons */}
-              <div className="mt-7 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 lg:mt-8">
+              <div className="mt-8 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 lg:mt-10">
                 <Link
                   href="/#projects"
-                  className="group inline-flex min-h-11 items-center justify-center gap-3 rounded-lg border border-blue-brand bg-blue-brand px-4 text-sm font-normal text-white shadow-[0_10px_28px_rgba(108,147,255,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(108,147,255,0.25)] md:text-base"
+                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-blue-brand bg-blue-brand px-4 text-sm font-normal text-white shadow-[0_10px_28px_rgba(108,147,255,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(108,147,255,0.25)] md:text-base"
                 >
                   <span>View Projects</span>
 
@@ -96,7 +96,7 @@ export function Hero() {
 
                 <Link
                   href="/#contact"
-                  className="group inline-flex min-h-11 items-center justify-center gap-3 rounded-lg border border-foreground bg-foreground px-4 text-sm font-normal text-background shadow-[0_10px_28px_rgba(40,38,33,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(40,38,33,0.18)] md:text-base"
+                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-foreground bg-foreground px-4 text-sm font-normal text-background shadow-[0_10px_28px_rgba(40,38,33,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(40,38,33,0.18)] md:text-base"
                 >
                   <span>Let&apos;s Work together!</span>
 
@@ -119,7 +119,7 @@ export function Hero() {
               className="
                 h-auto
                 w-full
-                max-w-[630px]
+                max-w-[720px]
                 object-contain
                 mix-blend-multiply
                 contrast-[1.04]
@@ -129,9 +129,9 @@ export function Hero() {
                 ease-out
                 hover:scale-[1.015]
                 lg:w-[118%]
-                lg:max-w-[700px]
+                lg:max-w-[800px]
                 xl:w-[125%]
-                xl:max-w-[770px]
+                xl:max-w-[880px]
               "
             />
           </div>
