@@ -22,70 +22,73 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-6">
           {/* Left content */}
           <div className="relative z-20 flex flex-col items-start text-left lg:translate-x-4 xl:translate-x-6">
-            {/* Name */}
-            <h1 className="font-sans text-[4.5rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[6rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[10rem]">
-              Muskan
-            </h1>
+            {/* Shared alignment wrapper */}
+            <div className="w-full max-w-[700px]">
+              {/* Name */}
+              <h1 className="font-sans text-[4.5rem] font-normal leading-[0.78] tracking-[-0.07em] text-foreground sm:text-[6rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[10rem]">
+                Muskan
+              </h1>
 
-            {/* Labels */}
-            <div className="mt-7 flex w-full max-w-[760px] items-start">
-              <p className="text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem]">
-                Visual &amp;
+              {/* Labels */}
+              <div className="mt-7 flex w-full items-start justify-between">
+                <p className="text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem]">
+                  Visual &amp;
+                  <br />
+                  Brand Identity
+                  <br />
+                  Designer
+                </p>
+
+                <p className="text-right text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem]">
+                  Emerging
+                  <br />
+                  designer
+                </p>
+              </div>
+
+              {/* Introduction */}
+              <p className="mt-10 w-full font-dribelland text-[1.85rem] font-normal leading-[0.92] tracking-normal text-foreground sm:text-[2.15rem] lg:mt-12 lg:text-[2.35rem] xl:text-[2.5rem]">
+                <span className="lg:whitespace-nowrap">
+                  I turn ambitious ideas into memorable brands that
+                </span>
                 <br />
-                Brand Identity
+                <span className="lg:whitespace-nowrap">
+                  capture attention, earn trust and help your business
+                </span>
                 <br />
-                Designer
+                become the obvious choice.
               </p>
 
-              <p className="ml-auto text-left text-[1.45rem] font-normal leading-[0.86] tracking-[-0.045em] text-foreground sm:text-[1.7rem] lg:text-[2rem]">
-                Emerging
-                <br />
-                designer
-              </p>
-            </div>
-
-            {/* Introduction */}
-            <p className="mt-10 max-w-[820px] font-dribelland text-[1.85rem] font-normal leading-[0.92] tracking-normal text-foreground sm:text-[2.15rem] lg:mt-12 lg:text-[2.35rem] xl:text-[2.5rem]">
-              <span className="whitespace-nowrap">
-                I turn ambitious ideas into memorable brands that
-              </span>
-              <br />
-              <span className="whitespace-nowrap">
-                capture attention, earn trust and help your business
-              </span>
-              <br />
-              become the obvious choice.
-            </p>
-
-            {/* Buttons */}
-            <div className="mt-10 grid w-full max-w-[700px] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 lg:mt-12">
-              <Link
-                href="/#projects"
-                className="group inline-flex min-h-14 items-center justify-center gap-4 rounded-lg border border-blue-brand bg-blue-brand px-6 text-base font-normal text-white shadow-[0_10px_28px_rgba(108,147,255,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(108,147,255,0.25)] md:text-lg"
-              >
-                <span>View Projects</span>
-
-                <span
-                  aria-hidden="true"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+              {/* Buttons */}
+              <div className="mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 lg:mt-12">
+                <Link
+                  href="/#projects"
+                  className="group inline-flex min-h-14 items-center justify-center gap-4 rounded-lg border border-blue-brand bg-blue-brand px-6 text-base font-normal text-white shadow-[0_10px_28px_rgba(108,147,255,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(108,147,255,0.25)] md:text-lg"
                 >
-                  →
-                </span>
-              </Link>
+                  <span>View Projects</span>
 
-              <Link
-                href="/#contact"
-                className="group inline-flex min-h-14 items-center justify-center gap-4 rounded-lg border border-foreground bg-foreground px-6 text-base font-normal text-background shadow-[0_10px_28px_rgba(40,38,33,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(40,38,33,0.18)] md:text-lg"
-              >
-                <span>Let&apos;s Work together!</span>
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
 
-                <span
-                  aria-hidden="true"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+                <Link
+                  href="/#contact"
+                  className="group inline-flex min-h-14 items-center justify-center gap-4 rounded-lg border border-foreground bg-foreground px-6 text-base font-normal text-background shadow-[0_10px_28px_rgba(40,38,33,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(40,38,33,0.18)] md:text-lg"
                 >
-                  →
-                </span>
-              </Link>
+                  <span>Let&apos;s Work together!</span>
+
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
 
