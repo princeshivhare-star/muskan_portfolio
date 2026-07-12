@@ -19,7 +19,7 @@ export function Hero() {
 
         <div className="order-1 flex w-full min-w-0 flex-col items-center text-center lg:order-2 lg:w-[354px]">
           {/* Muskan remains within both centre grid lines */}
-          <h1 className="w-full lg:-ml-[6.5px] whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[-0.049em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:text-[7.45rem]">
+          <h1 className="w-full lg:-ml-[6.5px] whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[-0.049em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:text-[7.4rem]">
             Muskan
           </h1>
 
@@ -28,7 +28,7 @@ export function Hero() {
             <img
               src="/muskan-logo.png"
               alt="Muskan portrait inside the brand logo"
-              className="block h-auto w-full object-contain lg:w-[138%] lg:max-w-none lg:-translate-x-[9.8%] lg:translate-y-[1.5px]"
+              className="block h-auto w-full object-contain lg:w-[133%] lg:max-w-none lg:-translate-x-[9.8%] lg:translate-y-[1.5px]"
             />
           </div>
 
