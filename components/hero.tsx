@@ -19,7 +19,7 @@ export function Hero() {
 
         <div className="order-1 flex w-full min-w-0 flex-col items-center text-center lg:order-2 lg:w-[354px]">
           {/* Muskan remains within both centre grid lines */}
-          <h1 className="w-full lg:-ml-[6px] whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[-0.049em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:text-[7.28rem]">
+          <h1 className="w-full lg:-ml-[6px] whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[-0.049em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:text-[7.3rem]">
             Muskan
           </h1>
 
