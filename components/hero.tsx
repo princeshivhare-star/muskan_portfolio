@@ -28,7 +28,7 @@ export function Hero() {
             <img
               src="/muskan-logo.png"
               alt="Muskan portrait inside the brand logo"
-              className="block h-auto w-full object-contain lg:w-[131%] lg:max-w-none lg:-translate-x-[9%] lg:translate-y-[2.4px]"
+              className="block h-auto w-full object-contain lg:w-[131%] lg:max-w-none lg:-translate-x-[9%] lg:translate-y-[2.2px]"
             />
           </div>
 
