@@ -20,15 +20,15 @@ export function Hero() {
         <div className="order-1 flex w-full min-w-0 flex-col items-center text-center lg:order-2 lg:w-[354px]">
           {/* Muskan starts and ends on the centre grid lines */}
           <h1 className="w-full -ml-[2px] whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[-0.082em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:text-[7.55rem]">
-          Muskan
+            Muskan
           </h1>
 
           {/* Enlarged logo so its visible edges touch both grid lines */}
-          <div className="mt-7 w-full overflow-visible md:mt-8 lg:mt-7">
+          <div className="mt-4 w-full overflow-visible md:mt-5 lg:mt-4">
             <img
               src="/muskan-logo.png"
-              alt="Muskan portrait inside the brand logo
-              className="block h-auto w-full object-contain lg:w-[132%] lg:max-w-none lg:-translate-x-[7.2%] lg:translate-y-[6px]"          
+              alt="Muskan portrait inside the brand logo"
+              className="block h-auto w-full object-contain lg:w-[132%] lg:max-w-none lg:-translate-x-[10%] lg:-translate-y-[8px]"
             />
           </div>
 
