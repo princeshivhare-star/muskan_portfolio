@@ -32,7 +32,7 @@ const reelImages = [
 
 export function ProjectReel() {
   return (
-    <section aria-label="Visual project reel" className="py-6 md:py-10">
+    <section aria-label="Visual project reel" className="-mt-8 py-5 md:-mt-14 md:py-8">
       <div className="overflow-hidden">
         <div className="animate-marquee flex w-max gap-4 px-4">
           {[...reelImages, ...reelImages].map((item, i) => (

@@ -12,29 +12,50 @@ export function Hero() {
           .hero-logo-reveal {
             position: relative;
             overflow: hidden;
+          }
+
+          .hero-logo-reveal > img {
+            opacity: 0.14;
+            filter: saturate(0.68) brightness(0.72);
+            animation: hero-logo-base 3.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+            will-change: opacity, filter;
+          }
+
+          .hero-logo-reveal::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background-image: url('/muskan-logo.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
             clip-path: inset(0 100% 0 0);
-            animation: hero-logo-reveal 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+            filter: saturate(1.06) brightness(1.08);
+            animation: hero-logo-reveal 3.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
             will-change: clip-path;
           }
 
           .hero-logo-reveal::after {
-            content: '';
-            position: absolute;
-            inset: -12% auto -12% 0;
-            width: 34%;
-            pointer-events: none;
-            background: linear-gradient(
-              90deg,
-              transparent 0%,
-              rgb(255 255 255 / 0.18) 42%,
-              rgb(255 255 255 / 0.42) 52%,
-              rgb(255 255 255 / 0.12) 64%,
-              transparent 100%
-            );
-            mix-blend-mode: screen;
-            transform: translate3d(-120%, 0, 0);
-            animation: hero-logo-sweep 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
-            will-change: transform, opacity;
+            content: none;
+          }
+
+          @keyframes hero-logo-base {
+            from {
+              opacity: 0.14;
+              filter: saturate(0.68) brightness(0.72);
+            }
+
+            76% {
+              opacity: 0.14;
+              filter: saturate(0.68) brightness(0.72);
+            }
+
+            to {
+              opacity: 1;
+              filter: saturate(1) brightness(1);
+            }
           }
 
           @keyframes hero-logo-reveal {
@@ -47,33 +68,15 @@ export function Hero() {
             }
           }
 
-          @keyframes hero-logo-sweep {
-            0% {
-              opacity: 0;
-              transform: translate3d(-120%, 0, 0);
-            }
-
-            18% {
-              opacity: 1;
-            }
-
-            78% {
-              opacity: 0.75;
-            }
-
-            100% {
-              opacity: 0;
-              transform: translate3d(330%, 0, 0);
-            }
-          }
-
           @media (prefers-reduced-motion: reduce) {
-            .hero-logo-reveal {
-              clip-path: inset(0 0 0 0);
+            .hero-logo-reveal > img {
+              opacity: 1;
+              filter: none;
               animation: none;
               will-change: auto;
             }
 
+            .hero-logo-reveal::before,
             .hero-logo-reveal::after {
               content: none;
             }
@@ -157,7 +160,7 @@ export function Hero() {
         </div>
 
         <div className="order-3 hidden lg:mt-[216px] lg:flex lg:justify-start">
-          <p className="max-w-[150px] text-right text-[1.32rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground lg:translate-x-[123px]">
+          <p className="max-w-[150px] text-right text-[1.32rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground lg:translate-x-[117px]">
             Strategic
             <br />
             Emerging
