@@ -157,7 +157,7 @@ export function Hero() {
         </div>
 
         <div className="order-3 hidden lg:mt-[216px] lg:flex lg:justify-start">
-          <p className="max-w-[150px] text-right text-[1.32rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground lg:translate-x-[127px]">
+          <p className="max-w-[150px] text-right text-[1.32rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground lg:translate-x-[123px]">
             Strategic
             <br />
             Emerging
