@@ -12,9 +12,8 @@
   font-weight: 400;
 }
 
-/* Neue Haas Grotesk Display Pro */
 @font-face {
-  font-family: 'Neue Haas Grotesk Display';
+  font-family: 'Neue Haas Grotesk Roman';
   src: url('/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
@@ -72,7 +71,7 @@
   --color-peher-cream: var(--peher-cream);
 
   --font-sans:
-    'Neue Haas Grotesk Display',
+    'Neue Haas Grotesk Roman',
     system-ui,
     sans-serif;
 
@@ -166,6 +165,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -175,9 +175,30 @@
 
 .font-stack-sans {
   font-family:
-    'Neue Haas Grotesk Display',
+    'Neue Haas Grotesk Roman',
     system-ui,
     sans-serif;
+}
+
+.hero-copy-line {
+  display: block;
+}
+
+.hero-copy-line > span + span::before {
+  content: ' ';
+}
+
+@media (min-width: 1024px) {
+  .hero-copy-line {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .hero-copy-line > span + span::before {
+    content: none;
+  }
 }
 
 @keyframes marquee {

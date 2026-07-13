@@ -27,15 +27,16 @@ export default function HomePage() {
             <br />
             for forgettable brand identities.
             <br />
-            I build{' '}
+            I build&nbsp;&nbsp;
             <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-yellow-brand">
               distinctive brand worlds
-            </span>{' '}
+            </span>
+            &nbsp;&nbsp;
             that
             <br />
             make businesses easier to recognise,
             <br />
-            easier to trust and{' '}
+            easier to trust and&nbsp;&nbsp;
             <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-lilac-brand">
               much harder to forget.
             </span>
