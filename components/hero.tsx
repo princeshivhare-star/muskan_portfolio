@@ -7,7 +7,80 @@ export function Hero() {
       id="about"
       className="font-stack-sans relative overflow-hidden bg-background px-5 pb-14 pt-20 text-foreground md:px-8 md:pb-20 md:pt-28 lg:min-h-[90vh] lg:px-0 lg:pt-[124px]"
     >
-      <div className="mx-auto grid w-full max-w-[923px] grid-cols-1 items-start lg:grid-cols-[268px_354px_301px] lg:origin-top lg:scale-[1.1]">
+      <style>
+        {`
+          .hero-logo-reveal {
+            position: relative;
+            overflow: hidden;
+            clip-path: inset(0 100% 0 0);
+            animation: hero-logo-reveal 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+            will-change: clip-path;
+          }
+
+          .hero-logo-reveal::after {
+            content: '';
+            position: absolute;
+            inset: -12% auto -12% 0;
+            width: 34%;
+            pointer-events: none;
+            background: linear-gradient(
+              90deg,
+              transparent 0%,
+              rgb(255 255 255 / 0.18) 42%,
+              rgb(255 255 255 / 0.42) 52%,
+              rgb(255 255 255 / 0.12) 64%,
+              transparent 100%
+            );
+            mix-blend-mode: screen;
+            transform: translate3d(-120%, 0, 0);
+            animation: hero-logo-sweep 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+            will-change: transform, opacity;
+          }
+
+          @keyframes hero-logo-reveal {
+            from {
+              clip-path: inset(0 100% 0 0);
+            }
+
+            to {
+              clip-path: inset(0 0 0 0);
+            }
+          }
+
+          @keyframes hero-logo-sweep {
+            0% {
+              opacity: 0;
+              transform: translate3d(-120%, 0, 0);
+            }
+
+            18% {
+              opacity: 1;
+            }
+
+            78% {
+              opacity: 0.75;
+            }
+
+            100% {
+              opacity: 0;
+              transform: translate3d(330%, 0, 0);
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .hero-logo-reveal {
+              clip-path: inset(0 0 0 0);
+              animation: none;
+              will-change: auto;
+            }
+
+            .hero-logo-reveal::after {
+              content: none;
+            }
+          }
+        `}
+      </style>
+      <div className="mx-auto grid w-full max-w-[923px] grid-cols-1 items-start lg:grid-cols-[268px_354px_301px] lg:origin-top lg:scale-[1.2]">
         <div className="order-2 mt-7 flex justify-between gap-6 lg:order-1 lg:mt-[216px] lg:justify-start">
           <p className="max-w-[150px] text-left text-[1.3rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground md:text-[1.55rem] lg:translate-x-[46px] lg:text-[1.32rem]">
             Visual &amp;
@@ -25,11 +98,13 @@ export function Hero() {
             </h1>
 
             <div className="mt-[26px] w-full overflow-visible md:mt-7 lg:mt-[24px]">
-              <img
-                src="/muskan-logo.png"
-                alt="Muskan portrait inside the brand logo"
-                className="block h-auto w-full object-contain lg:w-[132.3%] lg:max-w-none lg:-translate-x-[9.72%]"
-              />
+              <div className="hero-logo-reveal block h-auto w-full object-contain lg:w-[132.3%] lg:max-w-none lg:-translate-x-[9.72%]">
+                <img
+                  src="/muskan-logo.png"
+                  alt="Muskan portrait inside the brand logo"
+                  className="block h-auto w-full object-contain"
+                />
+              </div>
             </div>
 
             <p className="mt-[22px] w-full text-left text-[1.35rem] font-normal leading-[1.02] tracking-[-0.018em] text-foreground sm:text-[1.6rem] md:text-[1.85rem] lg:mt-[23px] lg:text-[1.09rem] lg:leading-[0.9]">

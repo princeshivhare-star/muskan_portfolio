@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="mx-auto grid max-w-[923px] grid-cols-[1fr_auto] items-center gap-5 px-5 py-3 md:px-8 lg:grid-cols-[268px_354px_301px] lg:gap-0 lg:px-0">
         <Link
           href="/"
-          className="justify-self-start text-[1.05rem] font-bold tracking-[0.01em] uppercase"
+          className="justify-self-start text-[1.05rem] font-bold tracking-[0.01em] uppercase lg:-translate-x-[37px]"
           aria-label="Muskan — home"
         >
           Muskan
@@ -40,7 +40,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center justify-self-end gap-5 md:flex">
+        <div className="hidden items-center justify-self-end gap-5 md:flex lg:translate-x-[37px]">
           {socialLinks.map((link) => (
             <a
               key={link.label}
