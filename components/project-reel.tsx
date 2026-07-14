@@ -41,14 +41,15 @@ export function ProjectReel() {
               href={item.href}
               tabIndex={i >= reelImages.length ? -1 : 0}
               aria-hidden={i >= reelImages.length}
-              className="relative block h-52 w-72 shrink-0 overflow-hidden rounded-2xl bg-secondary md:h-72 md:w-[26rem]"
+              className="reel-card relative block h-52 w-72 shrink-0 transform-gpu overflow-hidden rounded-2xl bg-secondary md:h-72 md:w-[26rem]"
             >
               <Image
                 src={item.image.src || '/placeholder.svg'}
                 alt={i < reelImages.length ? item.image.alt : ''}
                 fill
+                priority={i < 3}
                 sizes="(max-width: 768px) 288px, 416px"
-                className="object-cover transition-transform duration-500 hover:scale-105"
+                className="object-cover transition-transform duration-500 will-change-transform hover:scale-105"
               />
             </Link>
           ))}

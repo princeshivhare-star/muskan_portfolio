@@ -12,6 +12,9 @@ export function Hero() {
           .hero-logo-reveal {
             position: relative;
             overflow: hidden;
+            contain: paint;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
           }
 
           .hero-logo-reveal > img {
@@ -19,6 +22,7 @@ export function Hero() {
             filter: saturate(0.68) brightness(0.72);
             animation: hero-logo-base 3.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
             will-change: opacity, filter;
+            transform: translate3d(0, 0, 0);
           }
 
           .hero-logo-reveal::before {
@@ -35,10 +39,30 @@ export function Hero() {
             filter: saturate(1.06) brightness(1.08);
             animation: hero-logo-reveal 3.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
             will-change: clip-path;
+            transform: translate3d(0, 0, 0);
           }
 
           .hero-logo-reveal::after {
             content: none;
+          }
+
+          .hero-soft-reveal {
+            opacity: 0;
+            filter: blur(5px);
+            animation: hero-soft-reveal 1.05s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: opacity, filter;
+          }
+
+          @keyframes hero-soft-reveal {
+            from {
+              opacity: 0;
+              filter: blur(5px);
+            }
+
+            to {
+              opacity: 1;
+              filter: blur(0);
+            }
           }
 
           @keyframes hero-logo-base {
@@ -69,6 +93,7 @@ export function Hero() {
           }
 
           @media (prefers-reduced-motion: reduce) {
+            .hero-soft-reveal,
             .hero-logo-reveal > img {
               opacity: 1;
               filter: none;
@@ -83,9 +108,9 @@ export function Hero() {
           }
         `}
       </style>
-      <div className="mx-auto grid w-full max-w-[923px] grid-cols-1 items-start lg:grid-cols-[268px_354px_301px] lg:origin-top lg:scale-[1.2]">
+      <div className="mx-auto grid w-full max-w-[923px] grid-cols-1 items-start lg:grid-cols-[268px_354px_301px] lg:origin-top lg:translate-x-[10px] lg:scale-[1.2]">
         <div className="order-2 mt-7 flex justify-between gap-6 lg:order-1 lg:mt-[216px] lg:justify-start">
-          <p className="max-w-[150px] text-left text-[1.3rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground md:text-[1.55rem] lg:translate-x-[46px] lg:text-[1.32rem]">
+          <p className="font-stack-medium hero-soft-reveal max-w-[150px] text-left text-[1.3rem] leading-[0.86] tracking-[-0.018em] text-foreground md:text-[1.55rem] lg:translate-x-[46px] lg:text-[1.32rem]" style={{ animationDelay: '0.32s' }}>
             Visual &amp;
             <br />
             Brand Identity
@@ -96,7 +121,7 @@ export function Hero() {
 
         <div className="order-1 flex w-full min-w-0 flex-col items-start text-left lg:order-2 lg:w-[354px]">
           <div className="w-full lg:w-[354px]">
-            <h1 className="w-full origin-center whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[0.006em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]">
+            <h1 className="hero-soft-reveal w-full origin-center whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[0.006em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]" style={{ animationDelay: '0.08s' }}>
               Muskan
             </h1>
 
@@ -105,12 +130,15 @@ export function Hero() {
                 <img
                   src="/muskan-logo.png"
                   alt="Muskan portrait inside the brand logo"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="block h-auto w-full object-contain"
                 />
               </div>
             </div>
 
-            <p className="mt-[22px] w-full text-left text-[1.35rem] font-normal leading-[1.02] tracking-[-0.018em] text-foreground sm:text-[1.6rem] md:text-[1.85rem] lg:mt-[23px] lg:text-[1.09rem] lg:leading-[0.9]">
+            <p className="hero-soft-reveal mt-[22px] w-full text-left text-[1.35rem] font-normal leading-[1.02] tracking-[-0.018em] text-foreground sm:text-[1.6rem] md:text-[1.85rem] lg:mt-[23px] lg:text-[1.09rem] lg:leading-[0.9]" style={{ animationDelay: '0.5s' }}>
               <span className="hero-copy-line">
                 <span>I</span>
                 <span>turn</span>
@@ -140,10 +168,10 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="mt-12 flex w-full max-w-[484px] flex-col justify-center gap-4 self-center sm:flex-row md:mt-12 md:gap-7 lg:mt-[48px] lg:w-[484px]">
+          <div className="hero-soft-reveal mt-12 flex w-full max-w-[484px] flex-col justify-center gap-4 self-center sm:flex-row md:mt-12 md:gap-7 lg:mt-[48px] lg:w-[484px]" style={{ animationDelay: '0.68s' }}>
             <Link
               href="/#projects"
-              className="inline-flex h-12 min-w-[210px] items-center justify-center gap-2 rounded-[6px] border border-foreground bg-[#7293ff] px-8 text-lg font-normal tracking-[0.004em] text-white shadow-[0_14px_34px_rgba(114,147,255,0.18)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
+              className="hero-cta inline-flex h-12 min-w-[210px] items-center justify-center gap-2 rounded-[6px] border border-foreground bg-[#7293ff] px-8 text-lg font-normal tracking-[0.004em] text-white shadow-[0_14px_34px_rgba(114,147,255,0.18)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
             >
               <span>View Projects</span>
               <ArrowUpRight aria-hidden="true" className="size-4 stroke-[1.8]" />
@@ -151,7 +179,7 @@ export function Hero() {
 
             <Link
               href="/#contact"
-              className="inline-flex h-12 min-w-[230px] items-center justify-center gap-2 rounded-[6px] border border-foreground bg-foreground px-8 text-lg font-normal tracking-[0.004em] text-background shadow-[0_14px_34px_rgba(23,17,14,0.12)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
+              className="hero-cta inline-flex h-12 min-w-[230px] items-center justify-center gap-2 rounded-[6px] border border-foreground bg-foreground px-8 text-lg font-normal tracking-[0.004em] text-background shadow-[0_14px_34px_rgba(23,17,14,0.12)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
             >
               <span>Let&apos;s Work together!</span>
               <ArrowUpRight aria-hidden="true" className="size-4 stroke-[1.8]" />
@@ -160,7 +188,7 @@ export function Hero() {
         </div>
 
         <div className="order-3 hidden lg:mt-[216px] lg:flex lg:justify-start">
-          <p className="max-w-[150px] text-right text-[1.32rem] font-medium leading-[0.86] tracking-[-0.018em] text-foreground lg:translate-x-[117px]">
+          <p className="font-stack-medium hero-soft-reveal max-w-[150px] text-right text-[1.32rem] leading-[0.86] tracking-[-0.018em] text-foreground lg:translate-x-[103px]" style={{ animationDelay: '0.38s' }}>
             Strategic
             <br />
             Emerging

@@ -180,12 +180,70 @@
     sans-serif;
 }
 
+.font-stack-medium {
+  font-family:
+    'Neue Haas Grotesk Display',
+    'Neue Haas Grotesk Roman',
+    system-ui,
+    sans-serif;
+  font-weight: 500;
+}
+
 .hero-copy-line {
   display: block;
 }
 
 .hero-copy-line > span + span::before {
   content: ' ';
+}
+
+.hero-cta,
+.reel-card {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cta::after {
+  content: '';
+  position: absolute;
+  inset: -40% auto -40% -70%;
+  width: 48%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgb(255 255 255 / 0.26),
+    transparent
+  );
+  transform: translate3d(0, 0, 0) skewX(-18deg);
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.hero-cta:hover::after {
+  transform: translate3d(360%, 0, 0) skewX(-18deg);
+}
+
+.reel-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.18), transparent 38%),
+    linear-gradient(0deg, rgb(0 0 0 / 0.16), transparent 42%);
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.reel-card:hover::after {
+  opacity: 1;
 }
 
 @media (min-width: 1024px) {
@@ -203,18 +261,28 @@
 
 @keyframes marquee {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-marquee {
-  animation: marquee 58s linear infinite;
+  animation: marquee 45s linear infinite;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta::after,
+  .reel-card::after {
+    transition: none;
+  }
 }
