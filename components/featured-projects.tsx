@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { nocaffCover } from '@/lib/nocaff'
 import { peherCover } from '@/lib/peher'
 import { clubduelzCover } from '@/lib/clubduelz'
+import { metalalignsCover } from '@/lib/metalaligns'
 
 const projects = [
   {
@@ -25,6 +26,13 @@ const projects = [
     category: 'Brand Identity / Sports App / Football Platform',
     year: '2025',
     cover: clubduelzCover,
+  },
+  {
+    slug: 'metalaligns',
+    title: 'MetalAligns',
+    category: 'Logo Design / Visual Identity',
+    year: '2024',
+    cover: metalalignsCover,
   },
 ]
 

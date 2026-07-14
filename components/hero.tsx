@@ -109,7 +109,7 @@ export function Hero() {
         `}
       </style>
       <div className="mx-auto grid w-full max-w-[923px] grid-cols-1 items-start lg:grid-cols-[268px_354px_301px] lg:origin-top lg:translate-x-[10px] lg:scale-[1.2]">
-        <div className="order-2 mt-7 flex justify-between gap-6 lg:order-1 lg:mt-[216px] lg:justify-start">
+        <div className="order-2 mt-7 hidden justify-between gap-6 lg:order-1 lg:mt-[216px] lg:flex lg:justify-start">
           <p className="font-stack-medium hero-soft-reveal max-w-[150px] text-left text-[1.3rem] leading-[0.86] tracking-[-0.018em] text-foreground md:text-[1.55rem] lg:translate-x-[46px] lg:text-[1.32rem]" style={{ animationDelay: '0.32s' }}>
             Visual &amp;
             <br />
@@ -119,7 +119,7 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="order-1 flex w-full min-w-0 flex-col items-start text-left lg:order-2 lg:w-[354px]">
+        <div className="order-1 mx-auto flex w-full max-w-[390px] min-w-0 flex-col items-start text-left lg:order-2 lg:mx-0 lg:w-[354px] lg:max-w-none">
           <div className="w-full lg:w-[354px]">
             <h1 className="hero-soft-reveal w-full origin-center whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[0.006em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]" style={{ animationDelay: '0.08s' }}>
               Muskan
