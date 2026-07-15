@@ -106,6 +106,56 @@ export function Hero() {
               content: none;
             }
           }
+
+          @media (max-width: 639px) {
+            .hero-title-fit {
+              display: block;
+              width: 100%;
+              margin-left: auto;
+              margin-right: auto;
+              font-size: clamp(5.7rem, 24.9vw, 6.25rem);
+              letter-spacing: -0.055em;
+              transform: translateX(2px);
+              transform-origin: left center;
+            }
+          }
+
+          @media (min-width: 640px) and (max-width: 1023px) {
+            .hero-title-fit {
+              display: block;
+              width: 100%;
+              margin-left: auto;
+              margin-right: auto;
+              font-size: clamp(8.1rem, 21.6vw, 10.95rem);
+              letter-spacing: -0.058em;
+              transform: translateX(3px);
+              transform-origin: left center;
+            }
+          }
+
+          @media (max-width: 1023px) {
+            .hero-mobile-copy {
+              width: 100%;
+              margin-left: auto;
+              margin-right: auto;
+              white-space: normal;
+              word-break: normal;
+              overflow-wrap: normal;
+            }
+
+            .hero-copy-line {
+              display: inline;
+              white-space: normal;
+            }
+
+            .hero-copy-line > span + span::before {
+              content: ' ';
+            }
+
+            .hero-copy-line + .hero-copy-line::before {
+              content: ' ';
+            }
+          }
         `}
       </style>
       <div className="mx-auto grid w-full max-w-[923px] grid-cols-1 items-start lg:grid-cols-[268px_354px_301px] lg:origin-top lg:translate-x-[10px] lg:scale-[1.2]">
@@ -119,9 +169,9 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="order-1 mx-auto flex w-full max-w-[390px] min-w-0 flex-col items-start text-left lg:order-2 lg:mx-0 lg:w-[354px] lg:max-w-none">
+        <div className="order-1 mx-auto flex w-full max-w-[390px] min-w-0 flex-col items-start text-left sm:max-w-[500px] md:max-w-[650px] lg:order-2 lg:mx-0 lg:w-[354px] lg:max-w-none">
           <div className="w-full lg:w-[354px]">
-            <h1 className="hero-soft-reveal w-full origin-center whitespace-nowrap text-left text-[4.5rem] font-normal leading-[0.78] tracking-[0.006em] text-foreground sm:text-[6rem] md:text-[7.75rem] lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]" style={{ animationDelay: '0.08s' }}>
+            <h1 className="hero-title-fit hero-soft-reveal w-full whitespace-nowrap text-left font-normal leading-[0.78] tracking-[0.006em] text-foreground lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]" style={{ animationDelay: '0.08s' }}>
               Muskan
             </h1>
 
@@ -138,7 +188,7 @@ export function Hero() {
               </div>
             </div>
 
-            <p className="hero-soft-reveal mt-[22px] w-full text-left text-[1.35rem] font-normal leading-[1.02] tracking-[-0.018em] text-foreground sm:text-[1.6rem] md:text-[1.85rem] lg:mt-[23px] lg:text-[1.09rem] lg:leading-[0.9]" style={{ animationDelay: '0.5s' }}>
+            <p className="hero-mobile-copy hero-soft-reveal mt-[22px] w-full text-left text-[1.22rem] font-normal leading-[1.25] tracking-[-0.018em] text-foreground sm:text-[1.45rem] md:text-[1.68rem] lg:mt-[23px] lg:text-[1.09rem] lg:leading-[0.9]" style={{ animationDelay: '0.5s' }}>
               <span className="hero-copy-line">
                 <span>I</span>
                 <span>turn</span>

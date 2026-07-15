@@ -15,43 +15,45 @@ const socialLinks = [
 export function SiteHeader() {
   return (
     <header className="font-stack-sans sticky top-0 z-50 border-b border-border bg-background/92 backdrop-blur-md">
-      <div className="mx-auto grid max-w-[923px] grid-cols-[1fr_auto] items-center gap-5 px-5 py-3 md:px-8 lg:grid-cols-[268px_354px_301px] lg:gap-0 lg:px-0">
-        <Link
-          href="/"
-          className="justify-self-start text-[1.05rem] font-bold tracking-[0.01em] uppercase lg:-translate-x-[37px]"
-          aria-label="Muskan — home"
-        >
-          Muskan
-          <span className="text-blue-brand">.</span>
-        </Link>
+      <div className="px-5 sm:px-0">
+        <div className="mx-auto grid w-full max-w-[390px] grid-cols-[auto_1fr] items-center gap-4 py-4 sm:max-w-[500px] sm:gap-6 md:max-w-[650px] md:py-5 lg:max-w-[1000px] lg:grid-cols-[1fr_auto_1fr]">
+          <Link
+            href="/"
+            className="justify-self-start text-[0.95rem] font-bold tracking-[0.01em] uppercase sm:text-[1.05rem]"
+            aria-label="Muskan — home"
+          >
+            Muskan
+            <span className="text-blue-brand">.</span>
+          </Link>
 
-        <nav
-          aria-label="Main navigation"
-          className="flex items-center justify-self-end gap-5 md:gap-8 lg:justify-self-center"
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm font-medium tracking-[0.01em] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+          <nav
+            aria-label="Main navigation"
+            className="flex items-center justify-self-end gap-3 sm:gap-5 md:gap-6 lg:justify-self-center lg:gap-8"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-xs font-medium tracking-[0.01em] text-foreground/70 transition-colors hover:text-foreground sm:text-sm"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden items-center justify-self-end gap-5 md:flex lg:translate-x-[37px]">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-medium tracking-[0.08em] text-muted-foreground uppercase transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </a>
-          ))}
+          <div className="hidden items-center justify-self-end gap-5 lg:flex">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-medium tracking-[0.08em] text-foreground/70 uppercase transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </header>
