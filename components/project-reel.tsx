@@ -8,32 +8,32 @@ import { metalalignsImages } from '@/lib/metalaligns'
 const reelImages = [
   { image: peherImages[10], href: '/projects/peher' },
   { image: nocaffImages[0], href: '/projects/nocaff' },
-  { image: clubduelzImages[11], href: '/projects/clubduelz' }, // 12.png
-  { image: metalalignsImages[6], href: '/projects/metalaligns' }, // 7.png
+  { image: clubduelzImages[11], href: '/projects/clubduelz' }, // 12.png poster mockup
+  { image: metalalignsImages[1], href: '/projects/metalaligns' }, // 2.png business card mockup
 
   { image: peherImages[3], href: '/projects/peher' },
   { image: nocaffImages[7], href: '/projects/nocaff' },
-  { image: clubduelzImages[4], href: '/projects/clubduelz' }, // 5.png
-  { image: metalalignsImages[1], href: '/projects/metalaligns' }, // 2.png
+  { image: clubduelzImages[2], href: '/projects/clubduelz' }, // 3.png app icon mockup
+  { image: metalalignsImages[3], href: '/projects/metalaligns' }, // 4.png lanyard mockup
 
   { image: peherImages[6], href: '/projects/peher' },
   { image: nocaffImages[2], href: '/projects/nocaff' },
-  { image: clubduelzImages[8], href: '/projects/clubduelz' }, // 9.png
-  { image: metalalignsImages[2], href: '/projects/metalaligns' }, // 3.png
+  { image: clubduelzImages[8], href: '/projects/clubduelz' }, // 9.png poster mockups
+  { image: metalalignsImages[5], href: '/projects/metalaligns' }, // 6.png container mockup
 
   { image: peherImages[0], href: '/projects/peher' },
   { image: nocaffImages[11], href: '/projects/nocaff' },
-  { image: clubduelzImages[1], href: '/projects/clubduelz' }, // 2.png
-  { image: metalalignsImages[4], href: '/projects/metalaligns' }, // 5.png
+  { image: clubduelzImages[12], href: '/projects/clubduelz' }, // 13.png jersey mockup
+  { image: metalalignsImages[7], href: '/projects/metalaligns' }, // 8.png stationery mockup
 
   { image: peherImages[9], href: '/projects/peher' },
   { image: nocaffImages[13], href: '/projects/nocaff' },
-  { image: clubduelzImages[13], href: '/projects/clubduelz' }, // 14.png
-  { image: metalalignsImages[7], href: '/projects/metalaligns' }, // 8.png
+  { image: clubduelzImages[13], href: '/projects/clubduelz' }, // 14.png browser mockup
+  { image: metalalignsImages[8], href: '/projects/metalaligns' }, // 9.png shirt mockup
 
   { image: peherImages[5], href: '/projects/peher' },
   { image: nocaffImages[15], href: '/projects/nocaff' },
-  { image: clubduelzImages[6], href: '/projects/clubduelz' }, // 7.png
+  { image: clubduelzImages[14], href: '/projects/clubduelz' }, // 15.png watch mockup
   { image: metalalignsImages[9], href: '/projects/metalaligns' }, // 10.png
 ]
 
