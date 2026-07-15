@@ -179,15 +179,17 @@ export function Hero() {
               width: 75.6%;
               margin-left: 9.73%;
               margin-right: auto;
-              font-size: clamp(0.93rem, 3.9vw, 1rem);
+              font-size: clamp(0.82rem, 3.35vw, 0.9rem);
               line-height: 1.22;
               text-align: justify;
               text-align-last: justify;
             }
 
             .hero-mobile-copy .hero-copy-line {
-              display: block;
+              display: flex;
+              justify-content: space-between;
               white-space: nowrap;
+              width: 100%;
               text-align: justify;
               text-align-last: justify;
             }
@@ -240,19 +242,17 @@ export function Hero() {
                 <span>ideas</span>
                 {' '}
                 <span>into</span>
-              </span>
-              {' '}
-              <span className="hero-copy-line">
+                {' '}
                 <span>memorable</span>
                 {' '}
                 <span>brands</span>
-                {' '}
-                <span>that</span>
-                {' '}
-                <span>capture</span>
               </span>
               {' '}
               <span className="hero-copy-line">
+                <span>that</span>
+                {' '}
+                <span>capture</span>
+                {' '}
                 <span>attention,</span>
                 {' '}
                 <span>earn</span>
