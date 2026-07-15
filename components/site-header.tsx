@@ -41,7 +41,7 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden items-center justify-self-end gap-5 lg:flex">
+          <div className="hidden items-center justify-self-end gap-5 lg:flex lg:translate-x-4">
             {socialLinks.map((link) => (
               <a
                 key={link.label}

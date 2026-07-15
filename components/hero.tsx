@@ -113,10 +113,16 @@ export function Hero() {
               width: 100%;
               margin-left: auto;
               margin-right: auto;
-              font-size: clamp(5.7rem, 24.9vw, 6.25rem);
+              font-size: clamp(5.45rem, 22.6vw, 5.65rem);
               letter-spacing: -0.055em;
-              transform: translateX(2px);
+              transform: translateX(9.73%);
               transform-origin: left center;
+            }
+
+            .hero-mobile-copy {
+              width: 75.6%;
+              margin-left: 9.73%;
+              margin-right: auto;
             }
           }
 
@@ -134,6 +140,17 @@ export function Hero() {
           }
 
           @media (max-width: 1023px) {
+            .hero-mobile-actions {
+              width: 100%;
+              max-width: none;
+              align-self: stretch;
+            }
+
+            .hero-mobile-actions .hero-cta {
+              width: 100%;
+              min-width: 0;
+            }
+
             .hero-mobile-copy {
               width: 100%;
               margin-left: auto;
@@ -154,6 +171,30 @@ export function Hero() {
 
             .hero-copy-line + .hero-copy-line::before {
               content: ' ';
+            }
+          }
+
+          @media (max-width: 639px) {
+            .hero-mobile-copy {
+              width: 75.6%;
+              margin-left: 9.73%;
+              margin-right: auto;
+              font-size: clamp(0.93rem, 3.9vw, 1rem);
+              line-height: 1.22;
+              text-align: justify;
+              text-align-last: justify;
+            }
+
+            .hero-mobile-copy .hero-copy-line {
+              display: block;
+              white-space: nowrap;
+              text-align: justify;
+              text-align-last: justify;
+            }
+
+            .hero-mobile-copy .hero-copy-line + .hero-copy-line::before,
+            .hero-mobile-copy .hero-copy-line > span + span::before {
+              content: none;
             }
           }
         `}
@@ -191,34 +232,55 @@ export function Hero() {
             <p className="hero-mobile-copy hero-soft-reveal mt-[22px] w-full text-left text-[1.22rem] font-normal leading-[1.25] tracking-[-0.018em] text-foreground sm:text-[1.45rem] md:text-[1.68rem] lg:mt-[23px] lg:text-[1.09rem] lg:leading-[0.9]" style={{ animationDelay: '0.5s' }}>
               <span className="hero-copy-line">
                 <span>I</span>
+                {' '}
                 <span>turn</span>
+                {' '}
                 <span>ambitious</span>
+                {' '}
                 <span>ideas</span>
+                {' '}
                 <span>into</span>
-                <span>memorable</span>
-                <span>brands</span>
               </span>
+              {' '}
               <span className="hero-copy-line">
+                <span>memorable</span>
+                {' '}
+                <span>brands</span>
+                {' '}
                 <span>that</span>
+                {' '}
                 <span>capture</span>
+              </span>
+              {' '}
+              <span className="hero-copy-line">
                 <span>attention,</span>
+                {' '}
                 <span>earn</span>
+                {' '}
                 <span>trust</span>
+                {' '}
                 <span>and</span>
+                {' '}
                 <span>help</span>
               </span>
+              {' '}
               <span className="hero-copy-line">
                 <span>your</span>
+                {' '}
                 <span>business</span>
+                {' '}
                 <span>become</span>
+                {' '}
                 <span>the</span>
+                {' '}
                 <span>obvious</span>
+                {' '}
                 <span>choice.</span>
               </span>
             </p>
           </div>
 
-          <div className="hero-soft-reveal mt-12 flex w-full max-w-[484px] flex-col justify-center gap-4 self-center sm:flex-row md:mt-12 md:gap-7 lg:mt-[48px] lg:w-[484px]" style={{ animationDelay: '0.68s' }}>
+          <div className="hero-mobile-actions hero-soft-reveal mt-12 flex w-full max-w-[484px] flex-col justify-center gap-4 self-center sm:flex-row md:mt-12 md:gap-7 lg:mt-[48px] lg:w-[484px]" style={{ animationDelay: '0.68s' }}>
             <Link
               href="/#projects"
               className="hero-cta inline-flex h-12 min-w-[210px] items-center justify-center gap-2 rounded-[6px] border border-foreground bg-[#7293ff] px-8 text-lg font-normal tracking-[0.004em] text-white shadow-[0_14px_34px_rgba(114,147,255,0.18)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
