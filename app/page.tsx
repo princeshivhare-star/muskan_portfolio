@@ -5,6 +5,7 @@ import { Hero } from '@/components/hero'
 import { ProjectReel } from '@/components/project-reel'
 import { FeaturedProjects } from '@/components/featured-projects'
 import { WhatIBring } from '@/components/what-i-bring'
+import { Testimonials } from '@/components/testimonials'
 
 export default function HomePage() {
   return (
@@ -40,20 +41,7 @@ export default function HomePage() {
         </section>
         <FeaturedProjects />
         <WhatIBring />
-        {/* Client testimonials */}
-        <section
-          aria-label="Client testimonials"
-          className="border-t border-border"
-        >
-          <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-            <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
-              Client Testimonials
-            </h2>
-            <p className="mt-6 font-script text-2xl text-muted-foreground md:text-3xl">
-              Kind words loading… check back soon.
-            </p>
-          </div>
-        </section>
+        <Testimonials />
       </main>
       <SiteFooter />
     </>
