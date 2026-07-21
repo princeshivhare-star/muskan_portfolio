@@ -10,12 +10,9 @@ export default function HomePage() {
   return (
     <>
       <SiteHeader />
-
       <main>
         <Hero />
-
         <ProjectReel />
-
         {/* Main positioning statement */}
         <section className="mx-auto flex justify-center px-6 py-12 md:px-10 md:py-16">
           <h2 className="mx-auto max-w-[920px] text-center text-[1.2rem] font-medium leading-[1.02] tracking-[-0.04em] md:text-[2rem] lg:text-[2.65rem] xl:text-[2.95rem]">
@@ -41,13 +38,8 @@ export default function HomePage() {
             </span>
           </h2>
         </section>
-
         <FeaturedProjects />
-
-        <Services />
-
         <WhatIBring />
-
         {/* Client testimonials */}
         <section
           aria-label="Client testimonials"
@@ -57,14 +49,12 @@ export default function HomePage() {
             <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
               Client Testimonials
             </h2>
-
             <p className="mt-6 font-script text-2xl text-muted-foreground md:text-3xl">
               Kind words loading… check back soon.
             </p>
           </div>
         </section>
       </main>
-
       <SiteFooter />
     </>
   )
