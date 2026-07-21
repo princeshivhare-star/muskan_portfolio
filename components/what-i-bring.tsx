@@ -13,17 +13,14 @@ type Badge = {
 }
 
 const labels = [
-  'Brand Identity',
-  'Logo Design',
+  'Brand identity systems',
   'Packaging Design',
-  'Label Design',
-  'Branding',
-  'Visual Design',
-  'Brochure Design',
-  'Social Media Design',
-  'Pitch Deck Design',
-  'Business Cards',
-  'Brand Guidelines',
+  'Brand and Content strategy',
+  'Brand consistency',
+  'Visual identity',
+  'Pitch deck design',
+  'Brand guidelines',
+  'Logo Design',
 ]
 
 export function WhatIBring() {
