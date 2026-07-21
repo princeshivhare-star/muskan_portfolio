@@ -4,7 +4,6 @@ import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/hero'
 import { ProjectReel } from '@/components/project-reel'
 import { FeaturedProjects } from '@/components/featured-projects'
-import { Services } from '@/components/services'
 import { WhatIBring } from '@/components/what-i-bring'
 
 export default function HomePage() {
