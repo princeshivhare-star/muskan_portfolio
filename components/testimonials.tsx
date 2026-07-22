@@ -1,3 +1,5 @@
+import { AnimatedHeading } from '@/components/animated-heading'
+
 const testimonials = [
   {
     name: 'Hannah Zhou',
@@ -25,31 +27,45 @@ const testimonials = [
   },
 ]
 
-export function Testimonials() {
+function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
   return (
-    <section aria-label="Client testimonials" className="py-16 md:py-24">
-      <h2 className="mx-auto max-w-6xl px-5 text-4xl font-bold tracking-tight md:px-8 md:text-6xl">
-        Words From Clients
-      </h2>
-      <div className="mt-10 overflow-hidden md:mt-14">
-        <div className="animate-marquee flex w-max gap-5 px-5">
-          {[...testimonials, ...testimonials].map((t, i) => (
-            <figure
-              key={i}
-              aria-hidden={i >= testimonials.length}
-              className="flex w-80 shrink-0 flex-col gap-5 rounded-2xl border border-border bg-card p-7 md:w-96"
-            >
-              <figcaption>
-                <p className="text-sm font-bold tracking-widest uppercase">{t.name}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{t.role}</p>
-              </figcaption>
-              <blockquote className="text-sm leading-relaxed text-muted-foreground">
-                {'"'}
-                {t.quote}
-                {'"'}
-              </blockquote>
-            </figure>
-          ))}
+    <figure className="flex w-full flex-col gap-5 rounded-2xl border border-border bg-card p-7">
+      <figcaption>
+        <p className="text-sm font-bold tracking-widest uppercase">{t.name}</p>
+        <p className="mt-1 text-sm text-muted-foreground">{t.role}</p>
+      </figcaption>
+      <blockquote className="text-sm leading-relaxed text-muted-foreground">
+        {'"'}
+        {t.quote}
+        {'"'}
+      </blockquote>
+    </figure>
+  )
+}
+
+export function Testimonials() {
+  const columnUp = [...testimonials, ...testimonials]
+  const columnDown = [...testimonials, ...testimonials].reverse()
+
+  return (
+    <section aria-label="Client testimonials" className="overflow-hidden py-16 md:py-24">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:items-center md:px-8">
+        <AnimatedHeading
+          text="Words From Clients"
+          as="h2"
+          className="text-4xl font-bold tracking-tight md:text-6xl"
+        />
+        <div className="relative grid h-[600px] grid-cols-2 gap-5 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+          <div className="animate-scroll-up flex flex-col gap-5">
+            {columnUp.map((t, i) => (
+              <TestimonialCard key={`up-${i}`} t={t} />
+            ))}
+          </div>
+          <div className="animate-scroll-down flex flex-col gap-5">
+            {columnDown.map((t, i) => (
+              <TestimonialCard key={`down-${i}`} t={t} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
