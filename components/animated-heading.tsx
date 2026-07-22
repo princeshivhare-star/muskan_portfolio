@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 
 interface AnimatedHeadingProps {
   text: string
   as?: 'h1' | 'h2' | 'h3'
   className?: string
   charDelay?: number
+  style?: CSSProperties
 }
 
 export function AnimatedHeading({
@@ -14,6 +15,7 @@ export function AnimatedHeading({
   as: Tag = 'h2',
   className = '',
   charDelay = 25,
+  style,
 }: AnimatedHeadingProps) {
   const ref = useRef<HTMLHeadingElement>(null)
   const [visible, setVisible] = useState(false)
@@ -35,7 +37,7 @@ export function AnimatedHeading({
   }, [])
 
   return (
-    <Tag ref={ref} className={className}>
+    <Tag ref={ref} className={className} style={style}>
       {text.split('').map((char, i) => (
         <span
           key={i}
