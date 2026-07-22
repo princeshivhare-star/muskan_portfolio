@@ -48,8 +48,11 @@ export function Testimonials() {
   const columnDown = [...testimonials, ...testimonials].reverse()
 
   return (
-    <section aria-label="Client testimonials" className="overflow-hidden py-16 md:py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:items-center md:px-8">
+    <section
+      aria-label="Client testimonials"
+      className="overflow-hidden border-t border-border py-16 md:py-24"
+    >
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:items-start md:px-8">
         <AnimatedHeading
           text="Words From Clients"
           as="h2"
