@@ -16,7 +16,7 @@ export function AnimatedHeading({
   lines,
   as: Tag = 'h2',
   className = '',
-  charDelay = 25,
+  charDelay = 55,
   style,
 }: AnimatedHeadingProps) {
   const ref = useRef<HTMLHeadingElement>(null)
@@ -50,7 +50,7 @@ export function AnimatedHeading({
             return (
               <span
                 key={i}
-                className="inline-block transition-all duration-500 ease-out"
+                className="inline-block transition-all duration-[900ms] ease-out"
                 style={{
                   opacity: visible ? 1 : 0,
                   transform: visible ? 'translateY(0)' : 'translateY(0.35em)',
