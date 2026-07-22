@@ -1,318 +1,54 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
+'use client'
 
-@custom-variant dark (&:is(.dark *));
+import { useEffect, useRef, useState } from 'react'
 
-@font-face {
-  font-family: 'Dribelland';
-  src: url('/fonts/Dribelland.ttf') format('truetype');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
+interface AnimatedHeadingProps {
+  text: string
+  as?: 'h1' | 'h2' | 'h3'
+  className?: string
+  charDelay?: number
 }
 
-@font-face {
-  font-family: 'Neue Haas Grotesk Roman';
-  src: url('/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
+export function AnimatedHeading({
+  text,
+  as: Tag = 'h2',
+  className = '',
+  charDelay = 25,
+}: AnimatedHeadingProps) {
+  const ref = useRef<HTMLHeadingElement>(null)
+  const [visible, setVisible] = useState(false)
 
-@font-face {
-  font-family: 'Neue Haas Grotesk Display';
-  src: url('/fonts/NeueHaasDisplayMediu.ttf') format('truetype');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 500 600;
-}
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
-@font-face {
-  font-family: 'Neue Haas Grotesk Display';
-  src: url('/fonts/NeueHaasDisplayBold.ttf') format('truetype');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700 800;
-}
-
-@font-face {
-  font-family: 'Neue Haas Grotesk Display';
-  src: url('/fonts/NeueHaasDisplayBlack.ttf') format('truetype');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 900;
-}
-
-@theme inline {
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --color-foreground: var(--foreground);
-  --color-background: var(--background);
-  --color-blue-brand: var(--blue-brand);
-  --color-yellow-brand: var(--yellow-brand);
-  --color-lilac-brand: var(--lilac-brand);
-  --color-peher-green: var(--peher-green);
-  --color-peher-sage: var(--peher-sage);
-  --color-peher-cream: var(--peher-cream);
-
-  --font-sans:
-    'Neue Haas Grotesk Roman',
-    system-ui,
-    sans-serif;
-
-  --font-serif:
-    var(--font-instrument-serif),
-    Georgia,
-    serif;
-
-  --font-script:
-    'Dribelland',
-    cursive;
-
-  --font-dribelland:
-    'Dribelland',
-    cursive;
-
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
-}
-
-:root {
-  color-scheme: light;
-
-  /* Muskan personal brand */
-  --background: #fcf9f5;
-  --foreground: #282621;
-  --card: #ffffff;
-  --card-foreground: #282621;
-  --popover: #ffffff;
-  --popover-foreground: #282621;
-  --primary: #6c93ff;
-  --primary-foreground: #fcf9f5;
-  --secondary: #f3eee6;
-  --secondary-foreground: #282621;
-  --muted: #f3eee6;
-  --muted-foreground: #6f6a5e;
-  --accent: #f9bb22;
-  --accent-foreground: #282621;
-  --destructive: #d64533;
-  --border: #e5ded2;
-  --input: #e5ded2;
-  --ring: #6c93ff;
-  --radius: 0.75rem;
-
-  /* Brand accents */
-  --blue-brand: #6c93ff;
-  --yellow-brand: #f9bb22;
-  --lilac-brand: #ca81dc;
-
-  /* Peher project palette */
-  --peher-green: #313929;
-  --peher-sage: #747e64;
-  --peher-cream: #fdf9f1;
-}
-
-/* Dark theme scope — used by the homepage, mirroring the reference site */
-.theme-dark {
-  color-scheme: dark;
-  --background: #0b0b0a;
-  --foreground: #f5f2ec;
-  --card: #161514;
-  --card-foreground: #f5f2ec;
-  --popover: #161514;
-  --popover-foreground: #f5f2ec;
-  --primary: #6c93ff;
-  --primary-foreground: #0b0b0a;
-  --secondary: #1c1b19;
-  --secondary-foreground: #f5f2ec;
-  --muted: #1c1b19;
-  --muted-foreground: #97918a;
-  --accent: #f9bb22;
-  --accent-foreground: #0b0b0a;
-  --border: #262522;
-  --input: #262522;
-  --ring: #6c93ff;
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans;
-    letter-spacing: 0.01em;
-  }
-}
-
-.font-dribelland {
-  font-family: 'Dribelland', cursive;
-}
-
-.font-stack-sans {
-  font-family:
-    'Neue Haas Grotesk Roman',
-    system-ui,
-    sans-serif;
-}
-
-.font-stack-medium {
-  font-family:
-    'Neue Haas Grotesk Display',
-    'Neue Haas Grotesk Roman',
-    system-ui,
-    sans-serif;
-  font-weight: 500;
-}
-
-.hero-copy-line {
-  display: block;
-}
-
-.hero-copy-line > span + span::before {
-  content: ' ';
-}
-
-.hero-cta,
-.reel-card {
-  isolation: isolate;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-cta > * {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-cta::after {
-  content: '';
-  position: absolute;
-  inset: -40% auto -40% -70%;
-  width: 48%;
-  background: linear-gradient(
-    100deg,
-    transparent,
-    rgb(255 255 255 / 0.26),
-    transparent
-  );
-  transform: translate3d(0, 0, 0) skewX(-18deg);
-  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 0;
-}
-
-.hero-cta:hover::after {
-  transform: translate3d(360%, 0, 0) skewX(-18deg);
-}
-
-.reel-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgb(255 255 255 / 0.18), transparent 38%),
-    linear-gradient(0deg, rgb(0 0 0 / 0.16), transparent 42%);
-  opacity: 0;
-  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 1;
-}
-
-.reel-card:hover::after {
-  opacity: 1;
-}
-
-@media (min-width: 1024px) {
-  .hero-copy-line {
-    display: flex;
-    justify-content: space-between;
-    white-space: nowrap;
-    width: 100%;
-  }
-
-  .hero-copy-line > span + span::before {
-    content: none;
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 45s linear infinite;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll-up {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(0, -50%, 0);
-  }
-}
-
-@keyframes scroll-down {
-  from {
-    transform: translate3d(0, -50%, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate-scroll-up {
-  animation: scroll-up 28s linear infinite;
-  backface-visibility: hidden;
-  will-change: transform;
-}
-
-.animate-scroll-down {
-  animation: scroll-down 28s linear infinite;
-  backface-visibility: hidden;
-  will-change: transform;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-cta::after,
-  .reel-card::after {
-    transition: none;
-  }
+  return (
+    <Tag ref={ref} className={className}>
+      {text.split('').map((char, i) => (
+        <span
+          key={i}
+          className="inline-block transition-all duration-500 ease-out"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? 'translateY(0)' : 'translateY(0.35em)',
+            transitionDelay: `${i * charDelay}ms`,
+          }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </span>
+      ))}
+    </Tag>
+  )
 }
