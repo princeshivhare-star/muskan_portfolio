@@ -3,6 +3,7 @@ const socials = [
   { label: 'Instagram', href: 'https://instagram.com' },
   { label: 'LinkedIn', href: 'https://linkedin.com' },
 ]
+
 export function SiteFooter() {
   return (
     <footer id="contact" className="border-t border-border bg-foreground text-background">
