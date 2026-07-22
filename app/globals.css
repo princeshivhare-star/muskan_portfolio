@@ -280,9 +280,40 @@
   animation-play-state: paused;
 }
 
+@keyframes scroll-up {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes scroll-down {
+  from {
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up 28s linear infinite;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.animate-scroll-down {
+  animation: scroll-down 28s linear infinite;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-cta::after,
   .reel-card::after {
     transition: none;
   }
 }
+
