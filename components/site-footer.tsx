@@ -22,7 +22,7 @@ export function SiteFooter() {
           vmuskanaus@gmail.com
         </a>
         <div className="mt-8">
-          <a href="mailto:vmuskanaus@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-yellow-brand px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-105">
+          <a href="mailto:vmuskanaus@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-blue-brand px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-105">
             Let&apos;s Make It Memorable
             <span aria-hidden="true">→</span>
           </a>
