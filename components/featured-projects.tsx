@@ -4,6 +4,7 @@ import { nocaffCover } from '@/lib/nocaff'
 import { peherCover } from '@/lib/peher'
 import { clubduelzCover } from '@/lib/clubduelz'
 import { metalalignsCover } from '@/lib/metalaligns'
+import { AnimatedHeading } from '@/components/animated-heading'
 
 const projects = [
   {
@@ -42,9 +43,12 @@ export function FeaturedProjects() {
       id="projects"
       className="w-full px-5 py-16 md:px-8 md:py-24"
     >
-      <h2 className="text-left text-4xl font-bold tracking-tight md:text-6xl">
-        Featured Projects
-      </h2>
+     <AnimatedHeading
+        text="Featured Projects"
+        as="h2"
+       className="text-left text-4xl font-bold tracking-tight md:text-6xl"
+       />
+        
 
       <div className="mt-10 grid grid-cols-1 gap-8 md:mt-14 md:grid-cols-2">
         {projects.map((project) => (
