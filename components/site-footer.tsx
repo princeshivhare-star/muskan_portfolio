@@ -18,17 +18,11 @@ export function SiteFooter() {
         <p className="mt-8 text-sm text-background/60">
           For brand identities, packaging, art direction and creative collaborations:
         </p>
-        
-          href="mailto:vmuskanaus@gmail.com"
-          className="mt-1 inline-block text-lg font-medium underline decoration-blue-brand decoration-2 underline-offset-4 transition-colors hover:text-blue-brand"
-        >
+        <a href="mailto:vmuskanaus@gmail.com" className="mt-1 inline-block text-lg font-medium underline decoration-blue-brand decoration-2 underline-offset-4 transition-colors hover:text-blue-brand">
           vmuskanaus@gmail.com
         </a>
         <div className="mt-8">
-          
-            href="mailto:vmuskanaus@gmail.com"
-            className="inline-flex items-center gap-2 rounded-full bg-yellow-brand px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-105"
-          >
+          <a href="mailto:vmuskanaus@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-yellow-brand px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-105">
             Let&apos;s Make It Memorable
             <span aria-hidden="true">→</span>
           </a>
@@ -41,12 +35,7 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2">
               {socials.map((s) => (
                 <li key={s.label}>
-                  
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-background/80 transition-colors hover:text-yellow-brand"
-                  >
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm text-background/80 transition-colors hover:text-yellow-brand">
                     {s.label}
                   </a>
                 </li>
