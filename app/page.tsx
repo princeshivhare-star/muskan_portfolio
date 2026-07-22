@@ -6,6 +6,7 @@ import { ProjectReel } from '@/components/project-reel'
 import { FeaturedProjects } from '@/components/featured-projects'
 import { WhatIBring } from '@/components/what-i-bring'
 import { Testimonials } from '@/components/testimonials'
+import { ScrollReveal } from '@/components/scroll-reveal'
 
 export default function HomePage() {
   return (
@@ -13,35 +14,49 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
-        <ProjectReel />
+        <ScrollReveal>
+          <ProjectReel />
+        </ScrollReveal>
+
         {/* Main positioning statement */}
-        <section className="mx-auto flex justify-center px-6 py-12 md:px-10 md:py-16">
-          <h2 className="mx-auto max-w-[920px] text-center text-[1.2rem] font-medium leading-[1.02] tracking-[-0.04em] md:text-[2rem] lg:text-[2.65rem] xl:text-[2.95rem]">
-            <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-blue-brand">
-              Four years,
-            </span>{' '}
-            plenty of pixels and no room
-            <br />
-            for forgettable brand identities.
-            <br />
-            I build&nbsp;&nbsp;
-            <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-yellow-brand">
-              distinctive brand worlds
-            </span>
-            &nbsp;&nbsp;
-            that
-            <br />
-            make businesses easier to recognise,
-            <br />
-            easier to trust and&nbsp;&nbsp;
-            <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-lilac-brand">
-              much harder to forget.
-            </span>
-          </h2>
-        </section>
-        <FeaturedProjects />
-        <WhatIBring />
-        <Testimonials />
+        <ScrollReveal>
+          <section className="mx-auto flex justify-center px-6 py-12 md:px-10 md:py-16">
+            <h2 className="mx-auto max-w-[920px] text-center text-[1.2rem] font-medium leading-[1.02] tracking-[-0.04em] md:text-[2rem] lg:text-[2.65rem] xl:text-[2.95rem]">
+              <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-blue-brand">
+                Four years,
+              </span>{' '}
+              plenty of pixels and no room
+              <br />
+              for forgettable brand identities.
+              <br />
+              I build&nbsp;&nbsp;
+              <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-yellow-brand">
+                distinctive brand worlds
+              </span>
+              &nbsp;&nbsp;
+              that
+              <br />
+              make businesses easier to recognise,
+              <br />
+              easier to trust and&nbsp;&nbsp;
+              <span className="font-dribelland text-[1.42em] font-normal leading-none tracking-normal text-lilac-brand">
+                much harder to forget.
+              </span>
+            </h2>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <FeaturedProjects />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <WhatIBring />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Testimonials />
+        </ScrollReveal>
       </main>
       <SiteFooter />
     </>
