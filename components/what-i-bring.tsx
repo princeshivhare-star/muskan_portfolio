@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { AnimatedHeading } from '@/components/animated-heading'
 
 type Badge = {
   label: string
@@ -30,7 +31,6 @@ export function WhatIBring() {
   useEffect(() => {
     const node = sectionRef.current
     if (!node) return
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,7 +40,6 @@ export function WhatIBring() {
       },
       { threshold: 0.25 }
     )
-
     observer.observe(node)
     return () => observer.disconnect()
   }, [])
@@ -48,21 +47,16 @@ export function WhatIBring() {
   const badges: Badge[] = useMemo(() => {
     const radiusX = 39
     const radiusY = 44
-
     return labels.map((label, i) => {
       const angle = (-90 + (360 / labels.length) * i) * (Math.PI / 180)
-
       let top = 50 + radiusY * Math.sin(angle)
       let left = 50 + radiusX * Math.cos(angle)
-
       if (label === 'Visual Design') {
         top -= 10
       }
-
       if (label === 'Brochure Design') {
         top -= 10
       }
-
       return {
         label,
         top: `${top}%`,
@@ -79,9 +73,9 @@ export function WhatIBring() {
     <section
       ref={sectionRef}
       aria-label="What I bring to the table"
-      className="mx-auto max-w-6xl overflow-hidden px-5 pt-6 pb-20 md:px-8 md:pt-10 md:pb-28"
+      className="mx-auto max-w-6xl overflow-hidden px-5 pt-4 pb-14 md:px-8 md:pt-6 md:pb-20"
     >
-      <div className="relative min-h-[720px] md:min-h-[800px]">
+      <div className="relative min-h-[560px] md:min-h-[640px]">
         {badges.map((badge) => (
           <span
             key={badge.label}
@@ -99,7 +93,6 @@ export function WhatIBring() {
             {badge.label}
           </span>
         ))}
-
         <div
           className="absolute inset-0 flex flex-col items-center justify-center -translate-y-14 transition-all duration-700 ease-out"
           style={{
@@ -112,14 +105,13 @@ export function WhatIBring() {
           <img
             src="/logo.png"
             alt="Logo"
-            className="mb-5 h-auto w-28 md:w-36 lg:w-40"
+            className="mb-4 h-auto w-24 md:w-32 lg:w-36"
           />
-
-          <h2 className="text-center font-script text-[3.2rem] font-normal leading-[0.82] text-foreground md:text-[5rem] lg:text-[5.8rem]">
-            What I bring
-            <br />
-            to the table
-          </h2>
+          <AnimatedHeading
+            lines={['What I bring', 'to the table']}
+            as="h2"
+            className="text-center font-script text-[2.7rem] font-normal leading-[0.82] text-foreground md:text-[4.3rem] lg:text-[5rem]"
+          />
         </div>
       </div>
     </section>
