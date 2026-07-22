@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { AnimatedHeading } from '@/components/animated-heading'
 import { ArrowUpRight } from 'lucide-react'
 
 export function Hero() {
@@ -214,9 +215,14 @@ export function Hero() {
 
         <div className="order-1 mx-auto flex w-full max-w-[390px] min-w-0 flex-col items-start text-left sm:max-w-[500px] md:max-w-[650px] lg:order-2 lg:mx-0 lg:w-[354px] lg:max-w-none">
           <div className="w-full lg:w-[354px]">
-            <h1 className="hero-title-fit hero-soft-reveal w-full whitespace-nowrap text-left font-normal leading-[0.78] tracking-[0.006em] text-foreground lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]" style={{ animationDelay: '0.08s' }}>
-              Muskan
-            </h1>
+            <AnimatedHeading
+              text="Muskan"
+              as="h1"
+              className="hero-title-fit hero-soft-reveal w-full whitespace-nowrap text-left font-normal leading-[0.78] tracking-[0.006em] text-foreground lg:w-max lg:translate-x-[-15px] lg:scale-x-[0.961] lg:text-[7.4375rem] lg:tracking-[-0.028em]"
+              style={{ animationDelay: '0.08s' }}
+              />
+            
+            
 
             <div className="mt-[26px] w-full overflow-visible md:mt-7 lg:mt-[24px]">
               <div className="hero-logo-reveal block h-auto w-full object-contain lg:w-[132.3%] lg:max-w-none lg:-translate-x-[9.72%]">
