@@ -9,7 +9,7 @@ import { AnimatedHeading } from '@/components/animated-heading'
 const projects = [
   {
     slug: 'peher',
-    title: 'Modern Heritage',
+    title: 'Peher',
     category: 'Visual Identity / Fashion Apparel',
     year: '2025',
     cover: peherCover,
