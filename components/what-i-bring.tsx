@@ -45,8 +45,8 @@ export function WhatIBring() {
   }, [])
 
   const badges: Badge[] = useMemo(() => {
-    const radiusX = 39
-    const radiusY = 44
+    const radiusX = 26
+    const radiusY = 30
     return labels.map((label, i) => {
       const angle = (-90 + (360 / labels.length) * i) * (Math.PI / 180)
       let top = 50 + radiusY * Math.sin(angle)
@@ -64,7 +64,7 @@ export function WhatIBring() {
         rotate: Math.sin(angle) * 10,
         fx: -Math.cos(angle) * 180,
         fy: -Math.sin(angle) * 180,
-        delay: i * 50,
+        delay: i * 110,
       }
     })
   }, [])
@@ -79,7 +79,7 @@ export function WhatIBring() {
         {badges.map((badge) => (
           <span
             key={badge.label}
-            className="absolute rounded-full bg-blue-brand/20 px-3 py-2 text-[10px] font-semibold whitespace-nowrap text-blue-brand transition-all duration-700 ease-out will-change-transform sm:px-4 sm:text-xs md:px-6 md:py-3 md:text-base"
+            className="absolute rounded-full bg-blue-brand/20 px-3 py-2 text-[10px] font-semibold whitespace-nowrap text-blue-brand transition-all duration-[1400ms] ease-out will-change-transform sm:px-4 sm:text-xs md:px-6 md:py-3 md:text-base"
             style={{
               top: badge.top,
               left: badge.left,
@@ -94,7 +94,7 @@ export function WhatIBring() {
           </span>
         ))}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center -translate-y-14 transition-all duration-700 ease-out"
+          className="absolute inset-0 flex flex-col items-center justify-center -translate-y-14 transition-all duration-[1400ms] ease-out"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible
