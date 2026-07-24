@@ -4,6 +4,7 @@ import { nocaffCover } from '@/lib/nocaff'
 import { peherCover } from '@/lib/peher'
 import { clubduelzCover } from '@/lib/clubduelz'
 import { metalalignsCover } from '@/lib/metalaligns'
+import { ashaaraCover } from '@/lib/ashaara'
 import { AnimatedHeading } from '@/components/animated-heading'
 
 const projects = [
@@ -34,6 +35,13 @@ const projects = [
     category: 'Logo Design / Visual Identity',
     year: '2024',
     cover: metalalignsCover,
+  },
+  {
+  slug: 'ashaara',
+  title: 'Ashaara',
+  category: 'Visual Identity / Candles & Lifestyle',
+  year: '2026',
+  cover: ashaaraCover,
   },
 ]
 
