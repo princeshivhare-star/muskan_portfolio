@@ -1,4 +1,4 @@
-import Link from 'next/link'
+ import Link from 'next/link'
 
 const navLinks = [
   { label: 'About', href: '/#about' },
@@ -7,9 +7,9 @@ const navLinks = [
 ]
 
 const socialLinks = [
-  { label: 'Behance', href: 'https://behance.net' },
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muskan-varotaria/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/muskananddesign/' },
+  { label: 'Behance', href: ' https://www.behance.net/varotariamuskan' },
 ]
 
 export function SiteHeader() {
