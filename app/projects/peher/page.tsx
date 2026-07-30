@@ -190,6 +190,17 @@ export default function PeherPage() {
           </div>
         </div>
 
+        {/* Back to projects */}
+        <div className="mt-20 border-t border-border pt-10 text-center">
+          
+         <Link
+           href="/#projects"
+           className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-transform hover:scale-105"
+  >
+            Back to all projects
+             </Link>
+          </div>
+
         
         
       </main>
