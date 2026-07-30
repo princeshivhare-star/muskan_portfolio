@@ -289,7 +289,7 @@ export function Hero() {
           <div className="hero-mobile-actions hero-soft-reveal mt-12 flex w-full max-w-[484px] flex-col justify-center gap-4 self-center sm:flex-row md:mt-12 md:gap-7 lg:mt-[48px] lg:w-[484px]" style={{ animationDelay: '0.68s' }}>
             <Link
               href="/#projects"
-              className="hero-cta inline-flex h-12 min-w-[210px] items-center justify-center gap-2 rounded-[6px] border border-foreground bg-[#7293ff] px-8 text-lg font-normal tracking-[0.004em] text-white shadow-[0_14px_34px_rgba(114,147,255,0.18)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
+              className="hero-cta inline-flex h-12 min-w-[210px] items-center justify-center gap-2 rounded-[6px] bg-[#7293ff] px-8 text-lg font-normal tracking-[0.004em] text-white shadow-[0_14px_34px_rgba(114,147,255,0.18)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:min-w-[250px] lg:px-9 lg:text-[1.06rem]"
             >
               <span>View Projects</span>
               <ArrowUpRight aria-hidden="true" className="size-4 stroke-[1.8]" />
