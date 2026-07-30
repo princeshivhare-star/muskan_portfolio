@@ -1,3 +1,5 @@
+import { ArrowUpRight } from 'lucide-react'
+
 const socials = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muskan-varotaria/' },
   { label: 'Instagram', href: 'https://www.instagram.com/muskananddesign/' },
@@ -18,13 +20,19 @@ export function SiteFooter() {
         <p className="mt-8 text-sm text-background/60">
           For brand identities, packaging, art direction and creative collaborations:
         </p>
-        <a href="mailto:vmuskanaus@gmail.com" className="mt-1 inline-block text-lg font-medium underline decoration-blue-brand decoration-2 underline-offset-4 transition-colors hover:text-blue-brand">
+        
+          href="mailto:vmuskanaus@gmail.com"
+          className="mt-1 inline-block text-lg font-medium underline decoration-blue-brand decoration-2 underline-offset-4 transition-colors hover:text-blue-brand"
+        >
           vmuskanaus@gmail.com
         </a>
         <div className="mt-8">
-          <a href="mailto:vmuskanaus@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-blue-brand px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-105">
-            Let&apos;s Make It Memorable
-            <span aria-hidden="true">→</span>
+          
+            href="mailto:vmuskanaus@gmail.com"
+            className="hero-cta inline-flex h-12 min-w-[210px] items-center justify-center gap-2 rounded-[6px] bg-blue-brand px-8 text-lg font-normal tracking-[0.004em] text-background shadow-[0_14px_34px_rgba(114,147,255,0.18)] transition-transform hover:-translate-y-1 lg:h-[54px] lg:px-9 lg:text-[1.06rem]"
+          >
+            <span>Let&apos;s Make It Memorable</span>
+            <ArrowUpRight aria-hidden="true" className="size-4 stroke-[1.8]" />
           </a>
         </div>
         <div className="mt-16 grid gap-10 border-t border-background/15 pt-10 md:grid-cols-3">
@@ -35,7 +43,12 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2">
               {socials.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm text-background/80 transition-colors hover:text-yellow-brand">
+                  
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-background/80 transition-colors hover:text-yellow-brand"
+                  >
                     {s.label}
                   </a>
                 </li>
