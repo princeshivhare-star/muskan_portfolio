@@ -188,17 +188,6 @@ export default function AshaaraPage() {
           </div>
         </div>
 
-        <div className="mt-20 border-t border-border pt-10 text-center">
-          <p className="font-script text-2xl text-lilac-brand md:text-3xl">
-            More projects coming soon…
-          </p>
-          <Link
-            href="/#projects"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-transform hover:scale-105"
-          >
-            Back to all projects
-          </Link>
-        </div>
       </main>
       <SiteFooter />
     </>
