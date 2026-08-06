@@ -256,6 +256,11 @@ export default function CukePage() {
             <CaseImage index={5} />
             <CaseImage index={6} />
             <CaseImage index={7} />
+            <CaseImage index={8} />
+            <CaseImage index={9} />
+            <CaseImage index={10} />
+            <CaseImage index={11} />
+            <CaseImage index={12} />
           </div>
         </div>
 
