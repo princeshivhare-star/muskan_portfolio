@@ -5,6 +5,7 @@ import { peherCover } from '@/lib/peher'
 import { clubduelzCover } from '@/lib/clubduelz'
 import { metalalignsCover } from '@/lib/metalaligns'
 import { ashaaraCover } from '@/lib/ashaara'
+import { cukeCover } from '@/lib/cuke'
 import { AnimatedHeading } from '@/components/animated-heading'
 
 const projects = [
@@ -37,26 +38,29 @@ const projects = [
     cover: metalalignsCover,
   },
   {
-  slug: 'ashaara',
-  title: 'Ashaara',
-  category: 'Visual Identity / Candles & Lifestyle',
-  year: '2026',
-  cover: ashaaraCover,
+    slug: 'ashaara',
+    title: 'Ashaara',
+    category: 'Visual Identity / Candles & Lifestyle',
+    year: '2026',
+    cover: ashaaraCover,
+  },
+  {
+    slug: 'cuke',
+    title: 'CUKE',
+    category: 'Brand Identity / Packaging Design / Art Direction',
+    year: '2026',
+    cover: cukeCover,
   },
 ]
 
 export function FeaturedProjects() {
   return (
-    <section
-      id="projects"
-      className="w-full px-5 py-16 md:px-8 md:py-24"
-    >
-     <AnimatedHeading
+    <section id="projects" className="w-full px-5 py-16 md:px-8 md:py-24">
+      <AnimatedHeading
         text="Featured Projects"
         as="h2"
-       className="text-left text-4xl font-bold tracking-tight md:text-6xl"
-       />
-        
+        className="text-left text-4xl font-bold tracking-tight md:text-6xl"
+      />
 
       <div className="mt-10 grid grid-cols-1 gap-8 md:mt-14 md:grid-cols-2">
         {projects.map((project) => (
