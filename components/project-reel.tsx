@@ -4,33 +4,40 @@ import { nocaffImages } from '@/lib/nocaff'
 import { peherImages } from '@/lib/peher'
 import { clubduelzImages } from '@/lib/clubduelz'
 import { metalalignsImages } from '@/lib/metalaligns'
+import { ashaaraImages } from '@/lib/ashaara'
+import { cukeImages } from '@/lib/cuke'
 
 const reelImages = [
   { image: peherImages[10], href: '/projects/peher' },
   { image: nocaffImages[0], href: '/projects/nocaff' },
   { image: clubduelzImages[11], href: '/projects/clubduelz' }, // 12.png poster mockup
   { image: metalalignsImages[1], href: '/projects/metalaligns' }, // 2.png business card mockup
-
+  { image: ashaaraImages[1], href: '/projects/ashaara' }, // candle packaging
+  { image: cukeImages[1], href: '/projects/cuke' }, // flavour system
   { image: peherImages[3], href: '/projects/peher' },
   { image: nocaffImages[7], href: '/projects/nocaff' },
   { image: clubduelzImages[2], href: '/projects/clubduelz' }, // 3.png app icon mockup
   { image: metalalignsImages[3], href: '/projects/metalaligns' }, // 4.png lanyard mockup
-
+  { image: ashaaraImages[3], href: '/projects/ashaara' }, // lifestyle photography
+  { image: cukeImages[3], href: '/projects/cuke' }, // packaging + starburst graphics
   { image: peherImages[6], href: '/projects/peher' },
   { image: nocaffImages[2], href: '/projects/nocaff' },
   { image: clubduelzImages[8], href: '/projects/clubduelz' }, // 9.png poster mockups
   { image: metalalignsImages[5], href: '/projects/metalaligns' }, // 6.png container mockup
-
+  { image: ashaaraImages[5], href: '/projects/ashaara' }, // colour palette
+  { image: cukeImages[5], href: '/projects/cuke' }, // wrapping paper & bags
   { image: peherImages[0], href: '/projects/peher' },
   { image: nocaffImages[11], href: '/projects/nocaff' },
   { image: clubduelzImages[12], href: '/projects/clubduelz' }, // 13.png jersey mockup
   { image: metalalignsImages[7], href: '/projects/metalaligns' }, // 8.png stationery mockup
-
+  { image: ashaaraImages[7], href: '/projects/ashaara' }, // gifting & wrapping paper
+  { image: cukeImages[7], href: '/projects/cuke' }, // jars with transparent glass
   { image: peherImages[9], href: '/projects/peher' },
   { image: nocaffImages[13], href: '/projects/nocaff' },
   { image: clubduelzImages[13], href: '/projects/clubduelz' }, // 14.png browser mockup
   { image: metalalignsImages[8], href: '/projects/metalaligns' }, // 9.png shirt mockup
-
+  { image: ashaaraImages[9], href: '/projects/ashaara' }, // final brand presentation
+  { image: cukeImages[9], href: '/projects/cuke' }, // mascot poses
   { image: peherImages[5], href: '/projects/peher' },
   { image: nocaffImages[15], href: '/projects/nocaff' },
   { image: clubduelzImages[14], href: '/projects/clubduelz' }, // 15.png watch mockup
